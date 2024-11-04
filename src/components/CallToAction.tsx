@@ -13,11 +13,11 @@ const CallToAction = () => {
             Join thousands of companies using OpenIAP to automate their workflows
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="hover-lift">
-              Get Started Free <ArrowRight className="ml-2 h-5 w-5" />
+            <Button size="lg" className="hover-lift" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+              Get Started For Free <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="secondary" size="lg" className="hover-lift">
-              Schedule Demo
+            <Button variant="secondary" size="lg" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
+              Schedule a Meeitng
             </Button>
           </div>
         </div>

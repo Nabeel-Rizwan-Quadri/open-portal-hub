@@ -3,8 +3,10 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Community from "@/components/Community";
+import Compatible from "@/components/Compatible";
 import Pricing from "@/components/Pricing";
 import CallToAction from "@/components/CallToAction";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,9 +16,11 @@ const Index = () => {
         <Hero />
         <Features />
         <HowItWorks />
+        <Compatible />
         <Community />
-        <Pricing />
+        {/* <Pricing /> */}
         <CallToAction />
+        <Footer />
       </main>
     </div>
   );

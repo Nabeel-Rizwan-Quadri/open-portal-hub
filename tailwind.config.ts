@@ -19,6 +19,7 @@ export default {
     },
     extend: {
       colors: {
+        customGreen: '#32E38B',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
