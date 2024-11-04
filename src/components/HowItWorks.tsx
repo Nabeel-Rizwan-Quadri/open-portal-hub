@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const steps = [
   {
@@ -19,18 +20,36 @@ const steps = [
 ];
 
 const HowItWorks = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(".scroll-fade-in");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="how-it-works" className="py-20 px-4 gradient-bg">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 scroll-fade-in">
           How It Works
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative scroll-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="feature-card h-full">
-                <span className="text-5xl font-bold text-blue-500 opacity-50 mb-4 block">
+                <span className="text-5xl font-bold text-blue-500 opacity-50 mb-4 block float-animation">
                   {step.number}
                 </span>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
@@ -45,7 +64,7 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 scroll-fade-in">
           <Button size="lg" className="hover-lift">
             Start Building Now
           </Button>
