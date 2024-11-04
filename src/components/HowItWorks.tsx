@@ -1,0 +1,58 @@
+import { Button } from "@/components/ui/button";
+
+const steps = [
+  {
+    number: "01",
+    title: "Design Your Workflow",
+    description: "Use our visual workflow designer to create your automation process with drag-and-drop simplicity."
+  },
+  {
+    number: "02",
+    title: "Configure Integration",
+    description: "Connect your existing tools and systems using our pre-built connectors and APIs."
+  },
+  {
+    number: "03",
+    title: "Deploy & Monitor",
+    description: "Deploy your workflows to any environment and monitor their performance in real-time."
+  }
+];
+
+const HowItWorks = () => {
+  return (
+    <section id="how-it-works" className="py-20 px-4 gradient-bg">
+      <div className="container mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+          How It Works
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {steps.map((step, index) => (
+            <div key={index} className="relative">
+              <div className="feature-card h-full">
+                <span className="text-5xl font-bold text-blue-500 opacity-50 mb-4 block">
+                  {step.number}
+                </span>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <p className="text-gray-400">{step.description}</p>
+              </div>
+              {index < steps.length - 1 && (
+                <div className="hidden md:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                  <div className="w-4 h-4 rotate-45 border-t-2 border-r-2 border-gray-700"></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <Button size="lg" className="hover-lift">
+            Start Building Now
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HowItWorks;
