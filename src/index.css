@@ -33,6 +33,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -44,8 +45,8 @@
 }
 
 .feature-card {
-  @apply p-6 rounded-lg border border-gray-800 hover:border-blue-500 transition-all duration-300;
-  background: rgba(30, 41, 59, 0.5);
+  @apply p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all duration-300;
+  background: #1e293b80;
   animation: fadeInUp 0.6s ease-out backwards;
 }
 
@@ -87,6 +88,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -94,9 +96,12 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -104,4 +109,29 @@
 
 .float-animation {
   animation: float 3s ease-in-out infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* Slim scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Transparent background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #32E38B;
+  /* Tailwind's green-500 color */
+  border-radius: 4px;
+}
+
+.hero-img {
+  /* filter: brightness(0); */
+
+  /* filter: brightness(0.3) saturate(100%) hue-rotate(210deg) brightness(0.5) contrast(120%); */
+  /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(0%) contrast(100%); */
+  /* filter: sepia(1) saturate(0) brightness(0.6) contrast(1.2) hue-rotate(-180deg) */
+  filter: sepia(1) saturate(0) brightness(0.1) contrast(1.5) hue-rotate(-180deg);
 }

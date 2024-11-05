@@ -1,27 +1,39 @@
-import { Cloud, Lock, Settings, Share } from "lucide-react";
+import { Cloud, Lock, Settings, Share, Building, Gauge } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { Button } from "./ui/button";
 
 const features = [
   {
-    icon: <Cloud className="h-8 w-8 text-blue-500" />,
+    icon: <Cloud className="h-12 w-12 text-customGreen" />,
     title: "Cloud Native",
-    description: "Deploy anywhere with our cloud-native architecture and containerized workflows"
+    description: "Run on your favorite platform with our cloud-native architecture"
+  },  
+  {
+    icon: <Building className="h-12 w-12 text-customGreen" />,
+    title: "On-Premise",
+    description: "Deploy on-premise and off the grid for maximum data privacy"
   },
   {
-    icon: <Lock className="h-8 w-8 text-blue-500" />,
+    icon: <Lock className="h-12 w-12 text-customGreen" />,
     title: "Enterprise Security",
-    description: "Bank-grade security with end-to-end encryption and role-based access control"
+    description: "Encryption and role based access control to run in highly secure environments"
   },
   {
-    icon: <Settings className="h-8 w-8 text-blue-500" />,
+    icon: <Settings className="h-12 w-12 text-customGreen" />,
     title: "Powerful Automation",
-    description: "Build complex automation workflows with our intuitive visual designer"
+    description: "Orchestrate and scale your workflows using a single interface"
   },
   {
-    icon: <Share className="h-8 w-8 text-blue-500" />,
+    icon: <Share className="h-12 w-12 text-customGreen" />,
     title: "Seamless Integration",
-    description: "Connect with any system using our extensive library of pre-built connectors"
-  }
+    description: "Connect with the systems you are used to with our API library"
+  },
+  {
+    icon: <Gauge className="h-12 w-12 text-customGreen" />,
+    title: "Performance Overview",
+    description: "Maintain control over your automation using our monitoring and reporting tools"
+  },
+ 
 ];
 
 const Features = () => {
@@ -51,13 +63,13 @@ const Features = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 scroll-fade-in">
           Enterprise-Grade Features
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ref={featuresRef}>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={featuresRef}>
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card hover-lift scroll-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="feature-card hover-lift scroll-fade-in flex flex-col items-center justify-center "
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               <div className="mb-4 float-animation">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
@@ -65,6 +77,13 @@ const Features = () => {
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-16 scroll-fade-in">
+          <Button size="lg" className="hover-lift">
+            Learn More
+          </Button>
+        </div>
+
       </div>
     </section>
   );

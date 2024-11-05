@@ -1,39 +1,57 @@
-// import { Button } from "@/components/ui/button";
-// import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 import logo from "../images/logo.png"
 
 const CallToAction = () => {
+
+  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    // Define a handler to check the window width
+    const handleResize = () => {
+      setIsScreenSmall(window.innerWidth < 768);
+    };
+
+    // Add the resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call the handler initially in case the screen is already small
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className="py-10 px-4 border-t border-gradient-bg">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center align-middle">
-          <div>
+        <div className="md:flex md:justify-between md:items-center md:align-middle">
+          <div className="flex justify-center">
             <img src={logo} width={120} />
           </div>
-          <div className="flex flex-col md:flex-row space-x-10">
-            <span>
+          <div className={isScreenSmall ? "grid grid-cols-2 mt-4 space-y-2 text-center" : "flex flex-row lg:space-x-10 md:space-x-2"}>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Home
-            </span>
-            <span>
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
-            </span>
-            <span>
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricings
-            </span>
-            <span>
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Partners
-            </span>
-            <span>
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Terms & Conditions
-            </span>
-            <span>
+            </a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Privacy Policy
-            </span>
+            </a>
           </div>
         </div>
-        <p className="mt-4 text-gray-500 text-sm">OpenIAP is automation made simple - and open source</p>
+        <p className="text-center md:text-start mt-6 md:mt-4 text-gray-500 text-sm">OpenIAP is automation made simple - and open source</p>
       </div>
-    </section>
+    </section >
   );
 };
 

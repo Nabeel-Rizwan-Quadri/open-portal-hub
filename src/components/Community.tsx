@@ -12,7 +12,7 @@ const Community = () => {
           Be part of our vibrant community. Share knowledge, learn from others, and grow together.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           <Card className="p-6 scroll-fade-in hover:border-customGreen transition-all duration-300">
             <a target="_blank" rel="noopener noreferrer"
               className="flex flex-col items-center space-y-4">

@@ -18,24 +18,24 @@ const Header = () => {
             <div className="h-full">
               <img src={Backgound} width={34} />
             </div>
-            <div className="ms-2 md:ms-4 h-10 h-full">
+            <div className="mx-2 lg:ms-4 h-10 h-full">
               <img src={Logo} width={120} />
             </div>
           </a>
         </div>
 
         <div className="hidden md:flex items-center align-middle ">
-          <nav className="flex space-x-8">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+          <nav className="flex lg:space-x-8 space-x-2">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Home
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
             </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricings
             </a>
-            <span className="text-gray-300 hover:text-white transition-colors cursor-pointer"  onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+            <span className="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline "  onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
               Docs
             </span>
           </nav>

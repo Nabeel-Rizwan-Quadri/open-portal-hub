@@ -3,19 +3,20 @@ import { useEffect } from "react";
 
 const steps = [
   {
-    number: "01",
+    number: "Step #1",
     title: "Design Your Workflow",
-    description: "Use our visual workflow designer to create your automation process with drag-and-drop simplicity."
+    // description: "Start with a single software robot or use our orchestrator to control multiple robots."
+    description: "Start with a single software robot or use our orchestrator to control multiple robots."
   },
   {
-    number: "02",
+    number: "Step #2",
     title: "Configure Integration",
-    description: "Connect your existing tools and systems using our pre-built connectors and APIs."
+    description: "Automate using your own UI or connect to your existing tools using our API library"
   },
   {
-    number: "03",
-    title: "Deploy & Monitor",
-    description: "Deploy your workflows to any environment and monitor their performance in real-time."
+    number: "Step #3",
+    title: "Scale & Monitor",
+    description: "Maintain control as you scale with our performance monitoring tools"
   }
 ];
 
@@ -49,7 +50,7 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="relative scroll-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="feature-card h-full">
-                <span className="text-5xl font-bold text-blue-500 opacity-50 mb-4 block float-animation">
+                <span className="lg:text-5xl text-4xl font-bold text-customGreen opacity-50 mb-4 block float-animation">
                   {step.number}
                 </span>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
