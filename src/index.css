@@ -53,10 +53,21 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.scroll-slide-left.visible,
-.scroll-slide-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+.scroll-zoom-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-rotate-in {
+  opacity: 0;
+  transform: rotate(-5deg);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-bounce {
+  opacity: 0;
+  animation: bounce 1s ease-out forwards;
 }
 
 .scroll-fade-in {
@@ -65,9 +76,29 @@
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.scroll-slide-left.visible,
+.scroll-slide-right.visible,
+.scroll-zoom-in.visible,
+.scroll-rotate-in.visible,
+.scroll-bounce.visible,
 .scroll-fade-in.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0) scale(1) rotate(0);
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .gradient-bg {
