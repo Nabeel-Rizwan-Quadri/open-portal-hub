@@ -22,7 +22,7 @@ const CallToAction = () => {
   }, []);
 
   return (
-    <section className="py-10 px-4 border-t border-gradient-bg">
+    <section className="py-4 px-4 border-t border-gradient-bg">
       <div className="container mx-auto">
         <div className="md:flex md:justify-between md:items-center md:align-middle">
           <div className="flex justify-center">
