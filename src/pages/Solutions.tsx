@@ -15,7 +15,7 @@ const Solutions = () => {
       { threshold: 0.1 }
     );
 
-    const elements = document.querySelectorAll(".scroll-fade-in");
+    const elements = document.querySelectorAll(".scroll-fade-in, .scroll-slide-left, .scroll-slide-right");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -42,7 +42,7 @@ const Solutions = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="scroll-fade-in">
+            <div className="scroll-slide-left">
               <h2 className="text-3xl font-bold mb-6">
                 OpenFlow: Advanced Orchestration Software
               </h2>
@@ -63,7 +63,7 @@ const Solutions = () => {
                 ))}
               </ul>
             </div>
-            <div className="scroll-fade-in">
+            <div className="scroll-slide-right">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all duration-300">
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Visual Workflow Builder</h3>
@@ -80,7 +80,7 @@ const Solutions = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 scroll-fade-in">
+            <div className="order-2 md:order-1 scroll-slide-left">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all duration-300">
                 <Zap className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Drag-and-Drop Automation</h3>
@@ -89,7 +89,7 @@ const Solutions = () => {
                 </p>
               </div>
             </div>
-            <div className="order-1 md:order-2 scroll-fade-in">
+            <div className="order-1 md:order-2 scroll-slide-right">
               <h2 className="text-3xl font-bold mb-6">
                 OpenRPA: Comprehensive Automation Tool
               </h2>
