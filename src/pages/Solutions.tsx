@@ -22,7 +22,7 @@ const Solutions = () => {
   }, []);
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="pt-16">
       {/* Section One: Overview */}
       <section className="py-20 px-4 gradient-bg relative overflow-hidden">
         <div className="container mx-auto relative z-10">
