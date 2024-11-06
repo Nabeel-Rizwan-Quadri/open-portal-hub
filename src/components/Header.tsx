@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Logo from "../images/logo.png"
+import { Link } from "react-router-dom";
+import Logo from "../images/logo.png";
 import Backgound from "../images/backgound.png";
 import { Icon } from '@iconify/react';
 
@@ -10,40 +11,35 @@ const Header = () => {
 
   return (
     <header className="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-gray-800">
-
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-
         <div className="flex items-center w-200">
-          <a href="/" className="flex flex-row justify-center items-center align-middle ">
+          <Link to="/" className="flex flex-row justify-center items-center align-middle">
             <div className="h-full">
-              <img src={Backgound} width={34} />
+              <img src={Backgound} width={34} alt="Background" />
             </div>
             <div className="mx-2 lg:ms-4 h-10 h-full">
-              <img src={Logo} width={120} />
+              <img src={Logo} width={120} alt="Logo" />
             </div>
-          </a>
+          </Link>
         </div>
 
-        <div className="hidden md:flex items-center align-middle ">
+        <div className="hidden md:flex items-center align-middle">
           <nav className="flex lg:space-x-8 space-x-2">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Home
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
-            </a>
+            </Link>
             <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
-              Pricings
+              Pricing
             </a>
-            <span className="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline "  onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
+            <span className="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline" onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
               Docs
             </span>
           </nav>
-          <div className="ms-4 flex space-x-2 items-center align-middle ">
+          <div className="ms-4 flex space-x-2 items-center align-middle">
             <Icon icon="ri:github-fill" width={30} className="cursor-pointer" onClick={() => window.open('https://github.com/open-rpa/', '_blank', 'noopener,noreferrer')} />
-            {/* <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
-              Get Started
-            </Button> */}
             <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
               Get In Touch
             </Button>
@@ -53,17 +49,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* <div className="hidden md:flex items-center space-x-2" > */}
-        {/* <img src={Logo} width={150} /> */}
-        {/* <Icon icon="ri:github-fill" width={30} />
-          <Button variant="secondary" className="hover-lift">
-            Get In Touch
-          </Button>
-          <Button variant="secondary" className="hover-lift">
-            Get Started
-          </Button> */}
-        {/* </div> */}
-
         <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -72,34 +57,32 @@ const Header = () => {
         </button>
       </div>
 
-      {
-        isMenuOpen && (
-          <div className="md:hidden absolute w-full bg-background border-b border-gray-800">
-            <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              <a href="#features" className="text-gray-300 hover:text-white transition-colors w-full">
-                Home
-              </a>
-              <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">
-                Solutions
-              </a>
-              <a href="#docs" className="text-gray-300 hover:text-white transition-colors">
-                Pricings
-              </a>
-              <a href="#docs" className="text-gray-300 hover:text-white transition-colors">
-                Contact us
-              </a>
-              <Icon icon="ri:github-fill" width={30} />
-              <Button variant="secondary" className="w-full">
-                Get In Touch
-              </Button>
-              <Button variant="secondary" className="w-full">
-                Get Started
-              </Button>
-            </nav>
-          </div>
-        )
-      }
-    </header >
+      {isMenuOpen && (
+        <div className="md:hidden absolute w-full bg-background border-b border-gray-800">
+          <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors">
+              Solutions
+            </Link>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
+            </a>
+            <span className="text-gray-300 hover:text-white transition-colors cursor-pointer" onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
+              Docs
+            </span>
+            <Icon icon="ri:github-fill" width={30} />
+            <Button variant="secondary" className="w-full" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
+              Get In Touch
+            </Button>
+            <Button variant="default" className="w-full" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>
+              Login
+            </Button>
+          </nav>
+        </div>
+      )}
+    </header>
   );
 };
 
