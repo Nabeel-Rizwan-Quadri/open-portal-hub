@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CallToAction from "@/components/CallToAction";
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -9,6 +10,7 @@ const Layout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
+      <CallToAction />
       <Footer />
     </div>
   );

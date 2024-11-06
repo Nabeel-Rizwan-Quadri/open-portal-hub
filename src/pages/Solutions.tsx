@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const Solutions = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -115,7 +116,7 @@ const Solutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      {/* <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-2xl mx-auto scroll-fade-in">
             <h2 className="text-3xl font-bold mb-6">
@@ -134,7 +135,7 @@ const Solutions = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
