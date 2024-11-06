@@ -41,13 +41,13 @@ const Header = () => {
           </nav>
           <div className="ms-4 flex space-x-2 items-center align-middle ">
             <Icon icon="ri:github-fill" width={30} className="cursor-pointer" onClick={() => window.open('https://github.com/open-rpa/', '_blank', 'noopener,noreferrer')} />
-            <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+            {/* <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
               Get Started
-            </Button>
+            </Button> */}
             <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
               Get In Touch
             </Button>
-            <Button variant="default" className="hover-lift" onClick={() => window.open('https://app.openiap.io/ui/#/Login', '_blank', 'noopener,noreferrer')}>
+            <Button variant="default" className="hover-lift" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>
               Login
             </Button>
           </div>
