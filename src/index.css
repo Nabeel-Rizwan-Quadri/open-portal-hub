@@ -64,13 +64,6 @@
   transform: translateX(0) scale(1) rotate(0);
 }
 
-/* Add scroll-out animations */
-.scroll-slide-left.invisible { transform: translateX(50px); opacity: 0; }
-.scroll-slide-right.invisible { transform: translateX(-50px); opacity: 0; }
-.scroll-zoom-in.invisible { transform: scale(1.05); opacity: 0; }
-.scroll-rotate-in.invisible { transform: rotate(5deg); opacity: 0; }
-.scroll-fade-in.invisible { transform: translateY(-20px); opacity: 0; }
-
 /* Feature card styles */
 .feature-card {
   @apply p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all duration-300;
@@ -110,17 +103,6 @@
   to {
     opacity: 1;
     transform: translate(-50%, -50%) rotate(0) scale(1);
-  }
-}
-
-@keyframes fadeRotateOut {
-  from {
-    opacity: 1;
-    transform: translate(-50%, -50%) rotate(0) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(30deg) scale(1.2);
   }
 }
 

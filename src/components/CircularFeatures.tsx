@@ -1,5 +1,5 @@
 import { ArrowUp, ArrowUpRight, ArrowRight, ArrowDownRight, ArrowDown, ArrowDownLeft, ArrowLeft, ArrowUpLeft } from "lucide-react";
-import { useEffect, useRef } from "react";
+import openiap from "../images/opencore.png";
 
 const features = [
   { icon: <ArrowUp className="h-6 w-6 text-customGreen" />, text: "Agents" },
@@ -13,48 +13,31 @@ const features = [
 ];
 
 const CircularFeatures = () => {
-  const featuresRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            entry.target.classList.remove("invisible");
-          } else {
-            entry.target.classList.remove("visible");
-            entry.target.classList.add("invisible");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = document.querySelectorAll(".scroll-fade-in");
-    elements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="relative w-full max-w-3xl mx-auto h-[600px] my-20" ref={featuresRef}>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen animate-[pulse_3s_ease-in-out_infinite] hover:animate-none scroll-fade-in">
-        <div className="text-xl font-bold text-center">OpenCore</div>
+    <div className="relative w-full max-w-3xl mx-auto h-[600px] my-20">
+      {/* Center image with pulse animation */}
+      {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-40  flex items-center justify-center">
+        <div className="text-xl font-bold text-center animate-fade-in">
+          <img src={openiap} width={400} className="filter blur-sm"/>
+        </div>
+      </div> */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen animate-[pulse_3s_ease-in-out_infinite] hover:animate-none">
+        <div className="text-xl font-bold text-center animate-fade-in">OpenCore</div>
       </div>
 
+      {/* Features positioned in a circle with staggered fade-in and rotation */}
       {features.map((feature, index) => {
         const angle = (index * 360) / features.length;
         const radius = 230;
         const radian = (angle * Math.PI) / 180;
         const left = `calc(50% + ${Math.cos(radian) * radius}px)`;
         const top = `calc(50% + ${Math.sin(radian) * radius}px)`;
-        const delay = index * 0.2;
+        const delay = index * 0.2; // Stagger the animations
 
         return (
           <div
             key={index}
-            className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 hover:scale-110 scroll-fade-in"
+            className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 hover:scale-110"
             style={{
               left,
               top,
