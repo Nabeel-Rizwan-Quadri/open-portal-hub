@@ -106,6 +106,51 @@ const Solutions = () => {
         </div>
       </section>
 
+      {/* Section Three: OpenRPA */}
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 scroll-slide-left">
+              <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
+                <Zap className="w-full h-48 text-customGreen mb-4" />
+                <h3 className="text-xl font-semibold mb-4">No-Code Automation Builder</h3>
+                <p className="text-gray-400">
+                  Create powerful automation workflows without writing code. Perfect for business users
+                  who want to automate repetitive tasks quickly and efficiently.
+                </p>
+                <Button className="mt-6 w-full" size="lg" variant="outline">
+                  Watch Tutorial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 scroll-slide-right space-y-6">
+              <h2 className="text-3xl font-bold mb-6">
+                OpenRPA: Intelligent Process Automation
+              </h2>
+              <p className="text-gray-300">
+                Empower your team with our intelligent RPA solution that combines ease of use with
+                enterprise-grade capabilities. Build and deploy automations faster than ever with our
+                intuitive visual interface and extensive component library.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+                {[
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Visual Designer" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Smart Recording" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "AI-Powered" }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
+                    {feature.icon}
+                    <span>{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section Four: Integration Hub */}
       <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
         <div className="container mx-auto">
