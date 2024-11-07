@@ -16,11 +16,13 @@ const CircularFeatures = () => {
   return (
     <div className="relative w-full max-w-3xl mx-auto h-[600px] my-20">
       {/* Center image with pulse animation */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-40  flex items-center justify-center">
+      {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-40  flex items-center justify-center">
         <div className="text-xl font-bold text-center animate-fade-in">
-          {/* OpenCore */}
           <img src={openiap} width={400} className="filter blur-sm"/>
         </div>
+      </div> */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen animate-[pulse_3s_ease-in-out_infinite] hover:animate-none">
+        <div className="text-xl font-bold text-center animate-fade-in">OpenCore</div>
       </div>
 
       {/* Features positioned in a circle with staggered fade-in and rotation */}
