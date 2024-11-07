@@ -90,19 +90,19 @@ const Solutions = () => {
       </section>
 
       {/* Section Three: OpenRPA with Circular Features */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
+      <section className="py-10 px-4 bg-gradient-to-b from-background to-gray-900">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">
-              OpenRPA: Intelligent Process Automation
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Empower your team with our intelligent RPA solution that combines ease of use with
-              enterprise-grade capabilities. Build and deploy automations faster than ever with our
-              intuitive visual interface and extensive component library.
-            </p>
+          <div className="h-100 z-10">
+            <CircularFeatures />
+            {/* <div className="relative w-full h-full "> 
+              <img
+                src={Opencore}
+                alt="Background"
+                className="absolute inset-0 w-full h-full object-cover opacity-50 filter blur-sm"
+              />
+            </div> */}
           </div>
-          <CircularFeatures />
+
         </div>
       </section>
 
@@ -155,7 +155,7 @@ const Solutions = () => {
       <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto scroll-zoom-in opacity-0 scale-95 transition-all duration-700">
-            <img src={Opencore} width={600} className="filter blur-sm place-self-center"/>  
+            <img src={Opencore} width={600} className="filter blur-sm place-self-center" />
           </div>
         </div>
       </section>
