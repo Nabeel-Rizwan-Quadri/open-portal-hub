@@ -111,6 +111,29 @@ const Solutions = () => {
         </div>
       </section>
 
+       {/* Section Four: Integration Hub */}
+       <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto scroll-zoom-in opacity-0 scale-95 transition-all duration-700">
+            {/* <h2 className="text-3xl font-bold text-center mb-12">Integration Hub</h2> */}
+            <img src={Opencore} width={600} className="filter blur-sm place-self-center"/>  
+            {/* <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { icon: <LayoutGrid className="h-8 w-8 text-customGreen" />, title: "300+ Connectors", text: "Connect with your favorite tools and platforms" },
+                { icon: <Puzzle className="h-8 w-8 text-customGreen" />, title: "Custom APIs", text: "Build your own integrations with our SDK" },
+                { icon: <Cloud className="h-8 w-8 text-customGreen" />, title: "Cloud Ready", text: "Deploy anywhere with our cloud-native architecture" }
+              ].map((item, index) => (
+                <div key={index} className="bg-gray-800/30 p-6 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
+                  <div className="mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-400">{item.text}</p>
+                </div>
+              ))}
+            </div> */}
+          </div>
+        </div>
+      </section>
+
       {/* Section Three: OpenRPA */}
       <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
         <div className="container mx-auto">
@@ -151,28 +174,6 @@ const Solutions = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Four: Integration Hub */}
-      <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto scroll-zoom-in opacity-0 scale-95 transition-all duration-700">
-            <h2 className="text-3xl font-bold text-center mb-12">Integration Hub</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                { icon: <LayoutGrid className="h-8 w-8 text-customGreen" />, title: "300+ Connectors", text: "Connect with your favorite tools and platforms" },
-                { icon: <Puzzle className="h-8 w-8 text-customGreen" />, title: "Custom APIs", text: "Build your own integrations with our SDK" },
-                { icon: <Cloud className="h-8 w-8 text-customGreen" />, title: "Cloud Ready", text: "Deploy anywhere with our cloud-native architecture" }
-              ].map((item, index) => (
-                <div key={index} className="bg-gray-800/30 p-6 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
-                  <div className="mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-400">{item.text}</p>
-                </div>
-              ))}
             </div>
           </div>
         </div>
