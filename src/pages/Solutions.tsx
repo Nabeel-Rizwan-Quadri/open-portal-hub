@@ -1,10 +1,11 @@
 import { useEffect } from "react";
 import { ArrowRight, Box, Workflow, Zap, Cloud, Lock, Settings, Users, Database, LineChart, LayoutGrid, Puzzle, Columns, Rows, Shapes } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Opencore from "../images/opencore.png"
 
 const Solutions = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -29,13 +30,25 @@ const Solutions = () => {
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center scroll-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Enterprise-Grade Automation Solutions
+              Your
+              <span className="bg-clip-text text-customGreen">
+                {" "}Single Point{" "}
+              </span>
+              of Automation
+              {/* Your All-in-One Solution for Automation */}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 px-4 sm:px-0">
-              Transform your business operations with our comprehensive suite of automation tools. 
-              Built for scalability, security, and seamless integration with your existing systems.
+            <p className="text-xl text-gray-300  px-4 sm:px-0">
+              {/* Transform your business operations with our comprehensive suite of automation tools. 
+              Built for scalability, security, and seamless integration with your existing systems. */}
+
+              {/* Enhance your business process with our robust suite of automation tools, designed for scalability, security, and effortless integration with your existing systems. */}
+
+              Elevate your business processes with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <p className="text-xl text-gray-300 mb-8 px-4 sm:px-0">
+              Unlock efficiency and drive growth effortlessly.
+            </p>
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
               {[
                 { icon: <Cloud className="h-8 w-8 text-customGreen" />, title: "Cloud-Native", text: "Deploy anywhere with containerized architecture" },
                 { icon: <Lock className="h-8 w-8 text-customGreen" />, title: "Enterprise Security", text: "Bank-grade encryption and access controls" },
@@ -47,7 +60,7 @@ const Solutions = () => {
                   <p className="text-gray-400">{item.text}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
@@ -59,19 +72,20 @@ const Solutions = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="scroll-slide-left space-y-6">
               <h2 className="text-3xl font-bold mb-6">
-                OpenFlow: Advanced Process Orchestration
+                OpenCore: Advanced Process Orchestration
               </h2>
               <p className="text-gray-300">
-                Take control of your automation workflows with our powerful orchestration platform. 
-                OpenFlow helps you manage complex processes, coordinate multiple robots, and maintain 
-                visibility across your entire automation landscape.
+                {/* Take control of your automation workflows with our powerful orchestration platform.
+                OpenFlow helps you manage complex processes, coordinate multiple robots, and maintain
+                visibility across your entire automation landscape. */}
+                A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {[
                   { icon: <Database className="h-5 w-5 text-customGreen" />, text: "Centralized Control" },
                   { icon: <Users className="h-5 w-5 text-customGreen" />, text: "Team Collaboration" },
                   { icon: <LineChart className="h-5 w-5 text-customGreen" />, text: "Real-time Analytics" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Multi-robot Management" }
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform Integration" }
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
                     {feature.icon}
@@ -83,13 +97,12 @@ const Solutions = () => {
             <div className="scroll-slide-right">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Visual Process Designer</h3>
+                <h3 className="text-xl font-semibold mb-4">Versatile Automation Toolkit</h3>
                 <p className="text-gray-400">
-                  Design and deploy complex automation workflows using our intuitive drag-and-drop interface. 
-                  Perfect for both technical and non-technical users.
+                  Leverage the Power of Code for Advanced Automation, with Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Seamlessly Together.
                 </p>
                 <Button className="mt-6 w-full" size="lg">
-                  Try Demo
+                  Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -107,7 +120,7 @@ const Solutions = () => {
                 <Zap className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">No-Code Automation Builder</h3>
                 <p className="text-gray-400">
-                  Create powerful automation workflows without writing code. Perfect for business users 
+                  Create powerful automation workflows without writing code. Perfect for business users
                   who want to automate repetitive tasks quickly and efficiently.
                 </p>
                 <Button className="mt-6 w-full" size="lg" variant="outline">
@@ -121,8 +134,8 @@ const Solutions = () => {
                 OpenRPA: Intelligent Process Automation
               </h2>
               <p className="text-gray-300">
-                Empower your team with our intelligent RPA solution that combines ease of use with 
-                enterprise-grade capabilities. Build and deploy automations faster than ever with our 
+                Empower your team with our intelligent RPA solution that combines ease of use with
+                enterprise-grade capabilities. Build and deploy automations faster than ever with our
                 intuitive visual interface and extensive component library.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
@@ -170,17 +183,17 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 scroll-rotate-in opacity-0 transition-all duration-700" style={{ transform: 'rotate(-5deg)' }}>
-              <img 
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" 
-                alt="Security Visualization" 
+              <img
+                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+                alt="Security Visualization"
                 className="rounded-lg shadow-xl"
               />
             </div>
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
               <p className="text-gray-300">
-                Our platform is built with security at its core. With end-to-end encryption, 
-                role-based access control, and compliance with major security standards, 
+                Our platform is built with security at its core. With end-to-end encryption,
+                role-based access control, and compliance with major security standards,
                 your data is always protected.
               </p>
               <ul className="space-y-4">
@@ -253,9 +266,9 @@ const Solutions = () => {
               </div>
             </div>
             <div className="scroll-slide-right">
-              <img 
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" 
-                alt="Automation Robot" 
+              <img
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
+                alt="Automation Robot"
                 className="rounded-lg shadow-xl"
               />
             </div>
