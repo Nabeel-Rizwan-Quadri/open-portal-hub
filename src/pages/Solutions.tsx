@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, Box, Workflow, Zap, Cloud, Lock, Settings, Users, Database, LineChart, LayoutGrid, Puzzle, Columns, Rows, Shapes } from "lucide-react";
+import { ArrowRight, Box, Workflow, Zap, Cloud, Lock, LockKeyhole, Settings, Users, Database, LineChart, LayoutGrid, Puzzle, Columns, Rows, Shapes } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
 import Apidocs from "../images/solutions/apidocs.png"
@@ -118,17 +118,7 @@ const Solutions = () => {
       {/* Section Three: OpenRPA with Circular Features */}
       <section className="py-10 px-4 gradient-bg ">
         <div className="container mx-auto">
-          <div >
-            <CircularFeatures />
-            {/* <div className="relative w-full h-full "> 
-              <img
-                src={Opencore}
-                alt="Background"
-                className="absolute inset-0 w-full h-full object-cover opacity-50 filter blur-sm"
-              />
-            </div> */}
-          </div>
-
+          <CircularFeatures />
         </div>
       </section>
 
@@ -138,6 +128,12 @@ const Solutions = () => {
           <div className="max-w-4xl mx-auto scroll-zoom-in opacity-0 scale-95 transition-all duration-700">
             <img src={Opencore} width={600} className="filter blur-sm place-self-center" />
           </div>
+          <div class="relative">
+            <img src={Opencore} alt="Background Image" class="w-full h-full object-cover filter blur-sm" />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <Lock className="h-40 w-40 text-customGreen" />
+            </div>
+          </div>
         </div>
       </section> */}
 
@@ -146,11 +142,22 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2 scroll-zoom-in opacity-0 scale-95 transition-all duration-70" >
-              <img
+              {/* <img
                 src={Opencore}
                 alt="Security Visualization"
                 className="rounded-lg shadow-xl filter blur-sm"
-              />
+              /> */}
+              <div className="relative">
+                <img src={Opencore} alt="Background Image" className="w-full h-full object-cover filter blur-sm" />
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <LockKeyhole className="h-32 w-32 text-white opacity-70" />
+
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white-100" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M12 1a5 5 0 0 1 5 5v4h1a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3h1V6a5 5 0 0 1 5-5zm6 10H6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1zm-7-6a3 3 0 0 0-3 3v4h6V6a3 3 0 0 0-3-3z" />
+              </svg> */}
+                </div>
+              </div>
             </div>
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
@@ -245,19 +252,19 @@ const Solutions = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
+                  title: "Developer Portal",
+                  description: "Access powerful debugging tools, dedicated testing environments, and a supportive community to help streamline development.",
+                  image: Devportal
+                },
+                {
                   title: "API Documentation",
                   description: "Comprehensive API documentation with interactive examples and SDKs for major programming languages.",
                   image: Apidocs
                 },
-                {
-                  title: "Developer Portal",
-                  description: "Access powerful debugging tools, dedicated testing environments, and a supportive community to streamline development.",
-                  image: Devportal
-                }
               ].map((item, index) => (
-                <div key={index} className="scroll-fade-in opacity-0 transition-all duration-700">
-                  <div className="bg-gray-800/30 rounded-lg overflow-hidden border border-gray-700 hover:border-customGreen transition-all">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                <div key={index} className="scroll-fade-in opacity-0 transition-all duration-700 bg-gray-900 rounded-lg border-gray-700">
+                  <div className="overflow-hidden border  hover:border-customGreen transition-all rounded-lg border-gray-700">
+                    <img src={item.image} alt={item.title} className="w-full opacity-50" />
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-gray-400">{item.description}</p>
