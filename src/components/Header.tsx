@@ -31,9 +31,9 @@ const Header = () => {
             <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
             </Link>
-            <a href="/pricing" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricing
-            </a>
+            </Link>
             <span className="text-gray-300 hover:text-white transition-colors cursor-pointer underline-offset-4 hover:underline" onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
               Docs
             </span>
