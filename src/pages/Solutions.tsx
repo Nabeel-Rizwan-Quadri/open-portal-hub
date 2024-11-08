@@ -2,7 +2,11 @@ import { useEffect } from "react";
 import { ArrowRight, Box, Workflow, Zap, Cloud, Lock, Settings, Users, Database, LineChart, LayoutGrid, Puzzle, Columns, Rows, Shapes } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
+import Apidocs from "../images/solutions/apidocs.png"
+import Devportal from "../images/solutions/devportal.png"
 import CircularFeatures from "@/components/CircularFeatures";
+import { Icon } from '@iconify/react';
+let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-pointer animate-fade-in';
 
 const Solutions = () => {
   useEffect(() => {
@@ -26,7 +30,7 @@ const Solutions = () => {
   return (
     <div className="pt-16">
       {/* Section One: Overview */}
-      <section className="py-20 px-4 gradient-bg relative overflow-hidden">
+      <section className="py-20 px-4 gradient-bg relative overflow-hidden ">
         <div className="container mx-auto relative z-10">
           <div className="max-w-4xl mx-auto text-center scroll-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -37,18 +41,21 @@ const Solutions = () => {
               of Automation
             </h1>
             <p className="text-xl text-gray-300  px-4 sm:px-0">
-              Elevate your business processes with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
+              Elevate your business workflow with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
             </p>
             <p className="text-xl text-gray-300 mb-8 px-4 sm:px-0">
               Unlock efficiency and drive growth effortlessly.
             </p>
+            <Button className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
+              Get Started <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/80" />
       </section>
 
       {/* Section Two: OpenFlow */}
-      <section className="py-20 px-4">
+      <section className="py-10 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="scroll-slide-left space-y-6">
@@ -56,12 +63,12 @@ const Solutions = () => {
                 OpenCore: Advanced Process Orchestration
               </h2>
               <p className="text-gray-300">
-                A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
+                A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software you love. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {[
                   { icon: <Database className="h-5 w-5 text-customGreen" />, text: "Centralized Control" },
-                  { icon: <Users className="h-5 w-5 text-customGreen" />, text: "Team Collaboration" },
+                  { icon: <Users className="h-5 w-5 text-customGreen" />, text: "Collaborative Environment" },
                   { icon: <LineChart className="h-5 w-5 text-customGreen" />, text: "Real-time Analytics" },
                   { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform Integration" }
                 ].map((feature, index) => (
@@ -71,13 +78,32 @@ const Solutions = () => {
                   </div>
                 ))}
               </div>
+              <div className="flex justify-center mt-10 space-x-4">
+                {/* <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="mdi:youtube" width={30} height={30} />
+                  <p>Youtube</p>
+                </div> */}
+                <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openflow/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="ri:github-fill" width={30} height={30} />
+                  <p>Github</p>
+                </div>
+                <div className={iconClass} onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="icomoon-free:books" width={30} height={30} />
+                  <p>Docs</p>
+                </div>
+                {/* <div className={iconClass} onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="fa6-brands:forumbee" width={30} height={30} />
+                  <p>Forum</p>
+                </div> */}
+
+              </div>
             </div>
             <div className="scroll-slide-right">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Versatile Automation Toolkit</h3>
                 <p className="text-gray-400">
-                  Leverage the Power of Code for Advanced Automation, with Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Seamlessly Together.
+                  Leverage the Power of Code for Advanced Automation, or Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Seamlessly Together.
                 </p>
                 <Button className="mt-6 w-full" size="lg">
                   Learn More
@@ -90,9 +116,9 @@ const Solutions = () => {
       </section>
 
       {/* Section Three: OpenRPA with Circular Features */}
-      <section className="py-10 px-4 bg-gradient-to-b from-background to-gray-900">
+      <section className="py-10 px-4 gradient-bg ">
         <div className="container mx-auto">
-          <div className="h-100 z-10">
+          <div >
             <CircularFeatures />
             {/* <div className="relative w-full h-full "> 
               <img
@@ -106,77 +132,30 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* Section Three: OpenRPA */}
-      <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 scroll-slide-left">
-              <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
-                <Zap className="w-full h-48 text-customGreen mb-4" />
-                <h3 className="text-xl font-semibold mb-4">No-Code Automation Builder</h3>
-                <p className="text-gray-400">
-                  Create powerful automation workflows without writing code. Perfect for business users
-                  who want to automate repetitive tasks quickly and efficiently.
-                </p>
-                <Button className="mt-6 w-full" size="lg" variant="outline">
-                  Watch Tutorial
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-            <div className="order-1 lg:order-2 scroll-slide-right space-y-6">
-              <h2 className="text-3xl font-bold mb-6">
-                OpenRPA: Intelligent Process Automation
-              </h2>
-              <p className="text-gray-300">
-                Empower your team with our intelligent RPA solution that combines ease of use with
-                enterprise-grade capabilities. Build and deploy automations faster than ever with our
-                intuitive visual interface and extensive component library.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                {[
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Visual Designer" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Smart Recording" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "AI-Powered" }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
-                    {feature.icon}
-                    <span>{feature.text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Section Four: Integration Hub */}
-      <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
+      {/* <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto scroll-zoom-in opacity-0 scale-95 transition-all duration-700">
             <img src={Opencore} width={600} className="filter blur-sm place-self-center" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section Five: Security Features */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2 scroll-rotate-in opacity-0 transition-all duration-700" style={{ transform: 'rotate(-5deg)' }}>
+            <div className="md:w-1/2 scroll-zoom-in opacity-0 scale-95 transition-all duration-70" >
               <img
-                src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+                src={Opencore}
                 alt="Security Visualization"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl filter blur-sm"
               />
             </div>
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
               <p className="text-gray-300">
-                Our platform is built with security at its core. With end-to-end encryption,
-                role-based access control, and compliance with major security standards,
-                your data is always protected.
+                We partner with institutions in the most highly regulated sectors, where stringent, annual security audits are mandatory—and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, role-based access control, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
               </p>
               <ul className="space-y-4">
                 {[
@@ -197,7 +176,7 @@ const Solutions = () => {
       </section>
 
       {/* Section Six: Analytics Dashboard */}
-      <section className="py-20 px-4 bg-gradient-to-bl from-gray-900 via-background to-gray-900">
+      <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="text-center mb-12 scroll-bounce opacity-0 transition-all duration-700">
             <h2 className="text-3xl font-bold mb-4">Advanced Analytics</h2>
@@ -259,7 +238,7 @@ const Solutions = () => {
       </section>
 
       {/* Section Eight: Developer Tools */}
-      <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
+      <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Developer Tools</h2>
@@ -268,17 +247,17 @@ const Solutions = () => {
                 {
                   title: "API Documentation",
                   description: "Comprehensive API documentation with interactive examples and SDKs for major programming languages.",
-                  image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+                  image: Apidocs
                 },
                 {
                   title: "Developer Portal",
-                  description: "Access to debugging tools, testing environments, and community resources.",
-                  image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  description: "Access powerful debugging tools, dedicated testing environments, and a supportive community to streamline development.",
+                  image: Devportal
                 }
               ].map((item, index) => (
                 <div key={index} className="scroll-fade-in opacity-0 transition-all duration-700">
                   <div className="bg-gray-800/30 rounded-lg overflow-hidden border border-gray-700 hover:border-customGreen transition-all">
-                    <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                     <div className="p-6">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-gray-400">{item.description}</p>
@@ -286,6 +265,75 @@ const Solutions = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Three: OpenRPA */}
+      <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1 scroll-slide-left">
+              <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
+                <Zap className="w-full h-48 text-customGreen mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Low-Code Automation Builder</h3>
+                <p className="text-gray-400">
+                  Create powerful automation workflows without the need to write code. Perfect for business users
+                  who want to automate repetitive tasks quickly and efficiently.
+                </p>
+                <Button className="mt-6 w-full" size="lg" variant="outline" onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
+                  Watch Tutorial
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 scroll-slide-right space-y-6">
+              <h2 className="text-3xl font-bold mb-6">
+                OpenRPA: Robotic Process Automation
+              </h2>
+              <p className="text-gray-300">
+                Empower your team with our intelligent RPA solution that combines ease of use with
+                enterprise-grade capabilities. Build and deploy automations faster than ever with our
+                intuitive visual interface and extensive component library. Integrate with OpenCore to effortlessly scale your operations and enhance performance across all systems.
+              </p>
+              OR
+              <p className="text-gray-300">
+                Empower your team with our advanced, user-friendly RPA solution, designed for both speed and scalability. Build, deploy, and optimize automations faster than ever with our intuitive visual interface and an extensive library of pre-built components. Seamlessly integrate with OpenCore to enhance performance across all systems and scale operations effortlessly, bringing enterprise-grade capabilities to every automation.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+                {[
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Intuitive Interface" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Smart Recording" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform" },
+                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "AI-Powered" }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
+                    {feature.icon}
+                    <span>{feature.text}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-10 space-x-4">
+                {/* <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="mdi:youtube" width={30} height={30} />
+                  <p>Youtube</p>
+                </div> */}
+                <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openrpa/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="ri:github-fill" width={30} height={30} />
+                  <p>Github</p>
+                </div>
+                <div className={iconClass} onClick={() => window.open('https://docs.openiap.io/docs/openrpa/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="icomoon-free:books" width={30} height={30} />
+                  <p>Docs</p>
+                </div>
+                {/* <div className={iconClass} onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
+                  <Icon icon="fa6-brands:forumbee" width={30} height={30} />
+                  <p>Forum</p>
+                </div> */}
+
+              </div>
             </div>
           </div>
         </div>

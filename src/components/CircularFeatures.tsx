@@ -14,7 +14,7 @@ const features = [
 
 const CircularFeatures = () => {
   return (
-    <div className="relative w-full max-w-3xl mx-auto h-[600px] my-20">
+    <div className="relative w-full max-w-3xl mx-auto h-[600px]">
       {/* Center image with pulse animation */}
       {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-40  flex items-center justify-center">
         <div className="text-xl font-bold text-center animate-fade-in">
@@ -37,18 +37,26 @@ const CircularFeatures = () => {
         return (
           <div
             key={index}
-            className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 hover:scale-110"
+            className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 text-sm"
             style={{
               left,
               top,
               animation: `fadeRotateIn 0.6s ease-out ${delay}s backwards`,
             }}
           >
-            <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700 hover:border-customGreen hover:rotate-0 transition-all duration-300">
-              {feature.icon}
-              <p className="mt-2 text-sm">{feature.text}</p>
+            {/* <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700  duration-300"> */}
+            <div className="text-sm relative w-30 h-20 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card">
+              <p className="text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0">
+                FRONT OF CARD
+              </p>
+              <p className="text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-black transition-all z-10 card-back">
+                BACK OF CARD
+              </p>
             </div>
+            {/* {feature.icon}
+              <p className="mt-2 text-sm">{feature.text}</p> */}
           </div>
+          // </div>
         );
       })}
     </div>
