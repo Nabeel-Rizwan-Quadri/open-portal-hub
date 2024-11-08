@@ -4,7 +4,6 @@ import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Community from "@/components/Community";
 import Compatible from "@/components/Compatible";
-// import Pricing from "@/components/Pricing";
 
 const Index = () => {
   useEffect(() => {

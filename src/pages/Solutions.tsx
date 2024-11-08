@@ -40,10 +40,10 @@ const Solutions = () => {
               </span>
               of Automation
             </h1>
-            <p className="text-xl text-gray-300  px-4 sm:px-0">
+            <p className="text-xl text-gray-400  px-4 sm:px-0">
               Elevate your business workflow with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
             </p>
-            <p className="text-xl text-gray-300 mb-8 px-4 sm:px-0">
+            <p className="text-xl text-gray-400 mb-8 px-4 sm:px-0">
               Unlock efficiency and drive growth effortlessly.
             </p>
             <Button className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
@@ -62,7 +62,7 @@ const Solutions = () => {
               <h2 className="text-3xl font-bold mb-6">
                 OpenCore: Advanced Process Orchestration
               </h2>
-              <p className="text-gray-300">
+              <p className="text-gray-400">
                 A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software you love. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
@@ -161,7 +161,7 @@ const Solutions = () => {
             </div>
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-400">
                 We partner with institutions in the most highly regulated sectors, where stringent, annual security audits are mandatory—and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, role-based access control, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
               </p>
               <ul className="space-y-4">
@@ -187,7 +187,7 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 scroll-bounce opacity-0 transition-all duration-700">
             <h2 className="text-3xl font-bold mb-4">Advanced Analytics</h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto">
               Get deep insights into your automation workflows with our comprehensive analytics dashboard.
               Monitor performance, track efficiency, and optimize your processes in real-time.
             </p>
@@ -214,8 +214,8 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 scroll-slide-left">
-              <h2 className="text-3xl font-bold">Intelligent Process Automation</h2>
-              <p className="text-gray-300">
+              <h2 className="text-3xl font-bold">Effortless Scale Your Automation</h2>
+              <p className="text-gray-400">
                 Transform your business processes with AI-powered automation. Our platform learns from your workflows
                 and continuously optimizes them for maximum efficiency.
               </p>
@@ -299,13 +299,13 @@ const Solutions = () => {
               <h2 className="text-3xl font-bold mb-6">
                 OpenRPA: Robotic Process Automation
               </h2>
-              <p className="text-gray-300">
+              <p className="text-gray-400">
                 Empower your team with our intelligent RPA solution that combines ease of use with
                 enterprise-grade capabilities. Build and deploy automations faster than ever with our
                 intuitive visual interface and extensive component library. Integrate with OpenCore to effortlessly scale your operations and enhance performance across all systems.
               </p>
               OR
-              <p className="text-gray-300">
+              <p className="text-gray-400">
                 Empower your team with our advanced, user-friendly RPA solution, designed for both speed and scalability. Build, deploy, and optimize automations faster than ever with our intuitive visual interface and an extensive library of pre-built components. Seamlessly integrate with OpenCore to enhance performance across all systems and scale operations effortlessly, bringing enterprise-grade capabilities to every automation.
               </p>
 

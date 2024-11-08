@@ -2,7 +2,7 @@ import { Check, DollarSign } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 
-const Pricing = () => {
+const PricingSection = () => {
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto">
@@ -41,7 +41,7 @@ const Pricing = () => {
           </Card>
 
           {/* Premium Tier */}
-          <Card className="scroll-fade-in hover:scale-105 transition-all duration-300 hover:shadow-lg border-blue-500">
+          <Card className="scroll-fade-in hover:scale-105 transition-all duration-300 hover:shadow-lg border-customGreen">
             <CardHeader>
               <CardTitle>Premium</CardTitle>
               <CardDescription>For power users</CardDescription>
@@ -105,4 +105,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingSection;
