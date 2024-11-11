@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "../images/logo.png"
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
 
@@ -29,24 +30,24 @@ const CallToAction = () => {
             <img src={logo} width={120} />
           </div>
           <div className={isScreenSmall ? "grid grid-cols-2 mt-4 space-y-2 text-center" : "flex flex-row lg:space-x-10 md:space-x-2"}>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Home
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/pricings" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricings
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
-              Partners
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/telemetry" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+              Telemetry
+            </Link>
+            <Link to="/terms" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Terms & Conditions
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            </Link>
+            <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Privacy Policy
-            </a>
+            </Link>
           </div>
         </div>
         <p className="text-center md:text-start mt-6 md:mt-4 text-gray-500 text-sm">OpenIAP is automation made simple - and open source</p>

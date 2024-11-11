@@ -55,7 +55,7 @@ const Compatible = () => {
     <section id="features" className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 scroll-fade-in ">
-          Run it in your Favourite Cloud Solution!
+          Run it with your Favourite Cloud Solution!
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 space-y-4 lg:grid-cols-4 justify-items-center place-items-center" ref={featuresRef}>
@@ -71,7 +71,7 @@ const Compatible = () => {
           ))}
         </div>
 
-        <p className="text-center text-xl mt-20">or run it On-Premise.</p>
+        <p className="text-center text-xl mt-20">or On-Premise!</p>
       </div>
 
     </section>

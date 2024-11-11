@@ -8,6 +8,12 @@ import Index from "./pages/Index";
 import Solutions from "./pages/Solutions";
 import Pricing from "./pages/Pricing";
 
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Telemetry from "./pages/Telemetry";
+import Partners from "./pages/Partners";
+import PricingDetails from "./pages/PricingDetails";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,7 +26,15 @@ const App = () => (
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
             <Route path="/solutions" element={<Solutions />} />
+
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/pricing/details/:id" element={<PricingDetails />} />
+
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/telemetry" element={<Telemetry />} />
+            <Route path="/partners" element={<Partners />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

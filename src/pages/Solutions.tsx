@@ -10,6 +10,7 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Solutions = () => {
   useEffect(() => {
+    // window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -116,11 +117,7 @@ const Solutions = () => {
       </section>
 
       {/* Section Three: OpenRPA with Circular Features */}
-      <section className="py-10 px-4 gradient-bg ">
-        <div className="container mx-auto">
-          <CircularFeatures />
-        </div>
-      </section>
+      <CircularFeatures />
 
       {/* Section Four: Integration Hub */}
       {/* <section className="py-20 px-4 bg-gradient-to-tr from-gray-900 via-background to-gray-900">
@@ -299,12 +296,6 @@ const Solutions = () => {
               <h2 className="text-3xl font-bold mb-6">
                 OpenRPA: Robotic Process Automation
               </h2>
-              <p className="text-gray-400">
-                Empower your team with our intelligent RPA solution that combines ease of use with
-                enterprise-grade capabilities. Build and deploy automations faster than ever with our
-                intuitive visual interface and extensive component library. Integrate with OpenCore to effortlessly scale your operations and enhance performance across all systems.
-              </p>
-              OR
               <p className="text-gray-400">
                 Empower your team with our advanced, user-friendly RPA solution, designed for both speed and scalability. Build, deploy, and optimize automations faster than ever with our intuitive visual interface and an extensive library of pre-built components. Seamlessly integrate with OpenCore to enhance performance across all systems and scale operations effortlessly, bringing enterprise-grade capabilities to every automation.
               </p>
