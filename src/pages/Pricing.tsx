@@ -4,7 +4,7 @@ import PricingList from "@/components/PricingList";
 const Pricing = () => {
 
     useEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {

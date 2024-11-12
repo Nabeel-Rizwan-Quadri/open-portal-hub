@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, Box, Workflow, Zap, Github, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, Puzzle, Columns, Rows, Shapes } from "lucide-react";
+import { ArrowRight, Box, Workflow, Zap, Github, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, Rows } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
 import Apidocs from "../images/solutions/apidocs.png"
@@ -10,7 +10,7 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Solutions = () => {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -80,10 +80,6 @@ const Solutions = () => {
                 ))}
               </div>
               <div className="flex justify-center mt-10 space-x-4">
-                {/* <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
-                  <Icon icon="mdi:youtube" width={30} height={30} />
-                  <p>Youtube</p>
-                </div> */}
                 <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openflow/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="ri:github-fill" width={30} height={30} />
                   <p>Github</p>
@@ -92,11 +88,6 @@ const Solutions = () => {
                   <Icon icon="icomoon-free:books" width={30} height={30} />
                   <p>Docs</p>
                 </div>
-                {/* <div className={iconClass} onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
-                  <Icon icon="fa6-brands:forumbee" width={30} height={30} />
-                  <p>Forum</p>
-                </div> */}
-
               </div>
             </div>
             <div className="scroll-slide-right">
@@ -317,10 +308,6 @@ const Solutions = () => {
                 ))}
               </div>
               <div className="flex justify-center mt-10 space-x-4">
-                {/* <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
-                  <Icon icon="mdi:youtube" width={30} height={30} />
-                  <p>Youtube</p>
-                </div> */}
                 <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openrpa/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="ri:github-fill" width={30} height={30} />
                   <p>Github</p>
@@ -329,11 +316,6 @@ const Solutions = () => {
                   <Icon icon="icomoon-free:books" width={30} height={30} />
                   <p>Docs</p>
                 </div>
-                {/* <div className={iconClass} onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
-                  <Icon icon="fa6-brands:forumbee" width={30} height={30} />
-                  <p>Forum</p>
-                </div> */}
-
               </div>
             </div>
           </div>

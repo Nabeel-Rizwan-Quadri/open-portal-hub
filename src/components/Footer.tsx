@@ -36,7 +36,7 @@ const CallToAction = () => {
             <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Solutions
             </Link>
-            <Link to="/pricings" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricings
             </Link>
             <Link to="/telemetry" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">

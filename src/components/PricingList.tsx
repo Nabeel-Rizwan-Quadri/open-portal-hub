@@ -21,18 +21,11 @@ const PricingSection = () => {
           Our pricing is designed to scale with your needs
         </p>
 
-        <div className="flex space-x-4 justify-center items-center mb-8">
-          <div className={`p-2 rounded cursor-pointer ${screen === 1 && "bg-customGreen text-black"} `} onClick={() => setScreen(1)}>Licences</div>
-          <div className={`p-2 rounded cursor-pointer ${screen === 2 && "bg-customGreen text-black"} `} onClick={() => setScreen(2)}>Cloud</div>
-          <div className={`p-2 rounded cursor-pointer ${screen === 3 && "bg-customGreen text-black"} `} onClick={() => setScreen(3)}>Consulting</div>
+        <div className="flex space-x-4 justify-center items-center mb-8 ">
+          <div className={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 1 && "bg-customGreen text-black"} `} onClick={() => setScreen(1)}>Licences</div>
+          <div className={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 2 && "bg-customGreen text-black"} `} onClick={() => setScreen(2)}>Cloud</div>
+          <div className={`p-2 rounded cursor-pointer  hover:bg-customGreen hover:text-black ${screen === 3 && "bg-customGreen text-black"} `} onClick={() => setScreen(3)}>Consulting</div>
         </div>
-
-        {/* <div className="my-8 text-center text-gray-400">
-          {screen === 1 && <div></div>}
-          {screen === 2 && <div>Get (your dedicated)/a server for round the clock, uninterrupted service</div>}
-          {screen === 3 && <div></div>}
-        </div> */}
-
 
         {
           screen === 1 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
@@ -45,7 +38,7 @@ const PricingSection = () => {
 
               <div className="flex p-6 items-end">
                 <span className="text-3xl font-bold text-center">0 USD</span>
-                <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span>
+                {/* <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span> */}
               </div>
 
               <CardContent>
@@ -141,7 +134,7 @@ const PricingSection = () => {
 
               <div className="flex p-6 items-end">
                 <span className="text-3xl font-bold text-center">0 USD</span>
-                <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span>
+                {/* <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span> */}
               </div>
 
               <CardContent>
@@ -364,6 +357,7 @@ const PricingSection = () => {
             </Card>
           </div>
         }
+
         <div className="flex justify-center gap-4 my-6">
           <Button variant="secondary" className="hover-lift" size="lg" onClick={() => navigate(`details/${screen}`)}>
             Learn More
