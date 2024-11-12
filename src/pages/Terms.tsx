@@ -16,7 +16,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-3xl">
                             Terms of Use
                         </div>
-                        <ul className="list-disc list-inside text-gray-400">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 You must be at least 18 years old to use our services.
                             </li>
@@ -42,7 +42,7 @@ const Terms = () => {
                         <div className="text-gray-400 mb-4">
                             We value your privacy and take data protection seriously. The following types of information are collected:
                         </div>
-                        <ul className="list-disc list-inside text-gray-400">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Anonymized usage data for website improvements.
                             </li>
@@ -72,7 +72,7 @@ const Terms = () => {
                         <div className="text-gray-400 mb-4">
                             Our support is categorized and provided as follows:
                         </div>
-                        <ul className="list-disc list-inside text-gray-400">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Community assistance for unpaid support or issues at
                                 <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
@@ -116,7 +116,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-xl">
                             Cloud Subscription
                         </div>
-                        <ul className="list-disc list-inside text-gray-400">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Additional storage and enhanced resources for long-running agents are available for purchase.
                             </li>
@@ -133,7 +133,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-xl">
                             OpenIAP Flow License Subscription
                         </div>
-                        <ul className="list-disc list-inside text-gray-400">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Premium licenses are available for on-premise or cloud use.
                                 <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://app.openiap.io/ui/#/Customer', '_blank', 'noopener,noreferrer')}>
@@ -178,7 +178,7 @@ const Terms = () => {
                         <div className="text-gray-400 mb-4">
                             Consulting services offered include:
                         </div>
-                        <ul className="list-disc list-inside text-gray-400 mb-10">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Installation and troubleshooting of OpenIAP Flow on Kubernetes.
                             </li>
@@ -204,7 +204,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-xl">
                             Consulting Hours Terms
                         </div>
-                        <ul className="list-disc list-inside text-gray-400 mb-10">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Consulting hours must be booked at least 2 business days in advance.
                             </li>
@@ -227,9 +227,6 @@ const Terms = () => {
                                 In the event of a cancellation by OpenIAP ApS, all unspent and unexpired hours will be refunded fully.
                             </li>
                         </ul>
-                        <div className="text-gray-400 mb-4">
-                            We reserve the right to decline any consulting request and to terminate ongoing consulting if progress is unsatisfactory for either party. If OpenIAP ApS is the canceling party, all unspent hours will be refunded.
-                        </div>
                     </div>
 
                     <div className="my-10">
@@ -239,7 +236,7 @@ const Terms = () => {
                         <div className="text-gray-400 mb-4">
                             Subscription-related terms are as follows:
                         </div>
-                        <ul className="list-disc list-inside text-gray-400 mb-10">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Fees are based on the selected plan and are non-refundable.
                             </li>
@@ -284,7 +281,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-xl">
                             Warranty Disclaimer
                         </div>
-                        <ul className="list-disc list-inside text-gray-400 mb-10">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 The website and services are provided "AS IS" without warranties of any kind.
                             </li>
@@ -304,7 +301,7 @@ const Terms = () => {
                         <div className="text-customGreen mb-4 text-xl">
                             Limitation of Liability
                         </div>
-                        <ul className="list-disc list-inside text-gray-400 mb-10">
+                        <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 OpenIAP Aps is not responsible for consequential damages and indirect losses, as well as incompatibilities in relation to software provided by others than OpenIAP Aps. Likewise, OpenIAP Aps is not responsible for errors in software developed by third parties, sold, or delivered through OpenIAP Aps.
                             </li>
