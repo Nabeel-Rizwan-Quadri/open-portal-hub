@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, CalendarFold } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -104,11 +104,11 @@ const Privacy = () => {
                             </div>
 
                             <div className="flex flex-row space-x-4">
-                                <Button className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
-                                    Schedule Meeting <Phone className="ml-2 h-5 w-5" />
-                                </Button>
-                                <Button className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
+                                <Button variant="secondary" className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
                                     Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                                </Button>
+                                <Button  className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
+                                    Schedule a Meeting <CalendarFold className="ml-2 h-5 w-5" />
                                 </Button>
                             </div>
                         </div>

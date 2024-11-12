@@ -10,7 +10,7 @@ const PricingSection = () => {
   const [screen, setScreen] = useState(1);
 
   return (
-    <section className="pt-24 h-screen px-4 gradient-bg relative overflow-hidden flex justify-center items-center">
+    <section className="pt-24 h-screen px-4 gradient-bg flex flex-col justify-center">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center animate-fade-in">
           Flexible Pricing for Everyone
@@ -33,10 +33,11 @@ const PricingSection = () => {
           {screen === 3 && <div></div>}
         </div> */}
 
+
         {
-          screen === 1 && <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          screen === 1 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
             {/* Free Tier */}
-            <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+            <Card className="col-start-2 col-end-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
               <CardHeader>
                 <CardTitle>Free</CardTitle>
                 <CardDescription>Perfect for getting started</CardDescription>
@@ -101,7 +102,7 @@ const PricingSection = () => {
             <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
               <CardHeader>
                 <CardTitle>Enterprise</CardTitle>
-                <CardDescription>Custom solutions for Companies</CardDescription>
+                <CardDescription>Custom solutions</CardDescription>
                 <div className="text-3xl font-bold mt-4">Tailored pricing</div>
               </CardHeader>
               <CardContent>
@@ -130,7 +131,7 @@ const PricingSection = () => {
         }
 
         {
-          screen === 2 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          screen === 2 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
             {/* Free plan */}
             <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
               <CardHeader>
@@ -147,7 +148,7 @@ const PricingSection = () => {
                 <ul className="space-y-4">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
-                    Limited agent running time 4 hours
+                    Run time limited to 4 hours
                   </li>
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
@@ -326,21 +327,21 @@ const PricingSection = () => {
         }
 
         {
-          screen === 3 && <div className="grid grid-cols-1 md:grid-cols-1 gap-4 max-w-md mx-auto">
+          screen === 3 && <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto">
             {/* Free Tier */}
-            <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+            <Card className="col-start-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
               <CardHeader>
                 <CardTitle>Hourly</CardTitle>
                 <CardDescription>Perfect for onbording developers</CardDescription>
               </CardHeader>
 
-              <div className="flex p-6 items-end">
+              <div className="flex p-4 items-end">
                 <span className="text-3xl font-bold text-center">$216</span>
                 <span className="text-md font-bold text-center justify-end text-gray-600">/hour</span>
               </div>
 
               <CardContent>
-                <ul className="space-y-4">
+                <ul className="space-y-2">
                   <li className="flex items-center">
                     <Check className="mr-2 h-4 w-4 text-green-500" />
                     Advanced support
@@ -368,6 +369,7 @@ const PricingSection = () => {
             Learn More
           </Button>
         </div>
+
 
       </div>
     </section>

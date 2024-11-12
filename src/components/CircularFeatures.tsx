@@ -2,10 +2,10 @@ import { ArrowUp, ArrowUpRight, ArrowRight, ArrowDownRight, ArrowDown, ArrowDown
 import openiap from "../images/opencore.png";
 
 const features = [
-  { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run code in containers with easy redeployment " },
+  { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run your code anywhere, with easy redeployment" },
   { icon: <RefreshCcw className="h-6 w-6 text-customGreen" />, text: "Work Items", subText: "Use work items to perform back-to-back tasks" },
-  { icon: <LockKeyhole className="h-6 w-6 text-customGreen" />, text: "Access Control", subText: "Grant selective access to data for individuals of your choice" },
-  { icon: <Bot className="h-6 w-6 text-customGreen" />, text: "AI Chatbot", subText: "Use custom chatbot to link with your data" },
+  { icon: <LockKeyhole className="h-6 w-6 text-customGreen" />, text: "Access Control", subText: "All data and agents are protected with granular access control lists of your choice" },
+  { icon: <Bot className="h-6 w-6 text-customGreen" />, text: "AI Chatbot", subText: "'talk' to your agents and data from ChatGPT or using local LLM's" },
   { icon: <Unplug className="h-6 w-6 text-customGreen" />, text: "API Integration", subText: "API's available in all major programing languages" },
   { icon: <Code className="h-6 w-6 text-customGreen" />, text: "Low-Code Functions", subText: "Leverage our low-code functions to focus more on bussiness logic" },
   { icon: <FileStack className="h-6 w-6 text-customGreen" />, text: "Version Control", subText: "Keep track of the changes in your data" },
@@ -34,7 +34,7 @@ const CircularFeatures = () => {
             const radian = (angle * Math.PI) / 180;
             const left = `calc(48% + ${Math.cos(radian) * radius}px)`;
             const top = `calc(50% + ${Math.sin(radian) * radius}px)`;
-            const delay = index * 0.2; // Stagger the animations
+            const delay = index * 0.1; // Stagger the animations
 
             return (
               <div
@@ -56,7 +56,7 @@ const CircularFeatures = () => {
                       {feature.text}
                     </p>
                   </div>
-                  <div className="p-2 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
+                  <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
                     {feature.subText || "BACK OF CARD"}
 
                   </div>

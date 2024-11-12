@@ -70,10 +70,10 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="feature-card hover-lift scroll-fade-in flex flex-col items-center justify-center "
+              className="hover-float-parent feature-card hover-lift scroll-fade-in flex flex-col items-center justify-center "
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              <div className="mb-4 float-animation">{feature.icon}</div>
+              <div className="mb-4 hover-float">{feature.icon}</div>
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
             </div>

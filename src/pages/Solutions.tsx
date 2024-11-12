@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, Box, Workflow, Zap, Cloud, Lock, LockKeyhole, Settings, Users, Database, LineChart, LayoutGrid, Puzzle, Columns, Rows, Shapes } from "lucide-react";
+import { ArrowRight, Box, Workflow, Zap, Github, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, Puzzle, Columns, Rows, Shapes } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
 import Apidocs from "../images/solutions/apidocs.png"
@@ -184,7 +184,7 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="text-center mb-12 scroll-bounce opacity-0 transition-all duration-700">
             <h2 className="text-3xl font-bold mb-4">Advanced Analytics</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-3xl mx-auto">
               Get deep insights into your automation workflows with our comprehensive analytics dashboard.
               Monitor performance, track efficiency, and optimize your processes in real-time.
             </p>
@@ -211,17 +211,16 @@ const Solutions = () => {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 scroll-slide-left">
-              <h2 className="text-3xl font-bold">Effortless Scale Your Automation</h2>
+              <h2 className="text-3xl font-bold">Scale Your Automation Effortlessly</h2>
               <p className="text-gray-400">
-                Transform your business processes with AI-powered automation. Our platform learns from your workflows
-                and continuously optimizes them for maximum efficiency.
+                Increase your business efficiency with automation and monitoring tools. Use grafana for data vissualization, github for keeping track of you code, kubernetes for seamless automation and much more.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { icon: <Shapes />, text: "Smart Workflows" },
-                  { icon: <Columns />, text: "Process Mining" },
+                  { icon: <ChartColumn />, text: "Grafana" },
+                  { icon: <ShipWheel />, text: "kubernetes" },
                   { icon: <Rows />, text: "Task Automation" },
-                  { icon: <Settings />, text: "Custom Rules" }
+                  { icon: <Github />, text: "GitHub" }
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
                     {feature.icon}
@@ -251,18 +250,22 @@ const Solutions = () => {
                 {
                   title: "Developer Portal",
                   description: "Access powerful debugging tools, dedicated testing environments, and a supportive community to help streamline development.",
-                  image: Devportal
+                  image: Devportal,
+                  redirectTo: "https://app.openiap.io/ui/"
                 },
                 {
                   title: "API Documentation",
                   description: "Comprehensive API documentation with interactive examples and SDKs for major programming languages.",
-                  image: Apidocs
+                  image: Apidocs,
+                  redirectTo: "https://docs.openiap.io/"
                 },
               ].map((item, index) => (
-                <div key={index} className="scroll-fade-in opacity-0 transition-all duration-700 bg-gray-900 rounded-lg border-gray-700">
-                  <div className="overflow-hidden border  hover:border-customGreen transition-all rounded-lg border-gray-700">
+                <div
+                  onClick={() => window.open(item.redirectTo, '_blank', 'noopener,noreferrer')}
+                  key={index} className="hover:scale-105 cursor-pointer scroll-fade-in opacity-0 transition-all duration-700 bg-gray-900 rounded-lg border-gray-700">
+                  <div className="overflow-hidden border  hover:border-customGreen  transition-all rounded-lg border-gray-700" >
                     <img src={item.image} alt={item.title} className="w-full opacity-50" />
-                    <div className="p-6">
+                    <div className="p-6 w0full">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                       <p className="text-gray-400">{item.description}</p>
                     </div>
