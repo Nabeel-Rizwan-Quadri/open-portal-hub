@@ -29,9 +29,9 @@ const PricingSection = () => {
 
         <>
           {
-            screen === 1 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
+            screen === 1 && <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mx-auto">
               {/* Free Tier */}
-              <Card className="col-start-2 col-end-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+              <Card className="col-start-2 col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Free</CardTitle>
                   <CardDescription>Perfect for getting started</CardDescription>
@@ -43,6 +43,7 @@ const PricingSection = () => {
 
                 <CardContent>
                   <ul className="space-y-4">
+
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
                       Limited access to features
@@ -69,7 +70,7 @@ const PricingSection = () => {
               </Card>
 
               {/* Enterprise Tier */}
-              <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+              <Card className="col-start-4 col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Enterprise</CardTitle>
                   <CardDescription>Custom solutions</CardDescription>
@@ -78,41 +79,63 @@ const PricingSection = () => {
                 <CardContent>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Better pricing on consulting hours
+                      Scalability
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Cheaper consulting costs
+                      Custom AI Chatbot
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Gain insights into product development and future roadmap.
+                      Kubernetes
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Custom Chatbot
+                      Git
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-500 " />
+                      Grafana
+                    </li>
+                    <li className="flex items-center">
+                      Control
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500 " />
                       Access to OpenAI's apis
                     </li>
                     <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Have direct access to the product's dev team.
+                      <Check className="mr-2 h-4 w-4 text-green-500" />
+                      Reporting
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-500" />
+                      Performance Monitoring
+                    </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-500" />
+                      Automation Chat Support
+                    </li>
+                    <li className="flex items-center">
+                      Support
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
                       SLA
                     </li>
                     <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Scalability Options
+                      <Check className="mr-2 h-4 w-4 text-green-500 " />
+                      Priority Support
                     </li>
                     <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Access to Performance Monitoring tools
+                      <Check className="mr-2 h-4 w-4 text-green-500 " />
+                      Prod Dev Roadmap
                     </li>
+                    <li className="flex items-center">
+                      <Check className="mr-2 h-4 w-4 text-green-500 " />
+                      Access to Dev Team
+                    </li>
+
                   </ul>
                   <Button className="w-full mt-6">Contact Sales</Button>
                 </CardContent>
