@@ -13,12 +13,12 @@ const PricingSection = () => {
     <section className="pt-24 md:min-h-screen px-4 gradient-bg">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center animate-fade-in">
-          Flexible Pricing for Everyone
+          Flexible Pricing Tailored To Your Needs
         </h2>
-        <p className="text-xl text-gray-400 mb-12 text-center max-w-2xl mx-auto animate-fade-in">
+        <p className="text-xl text-gray-400 my-6 text-center max-w-2xl mx-auto animate-fade-in">
           {/* Choose the perfect plan that fits your needs */}
-
-          Our pricing is designed to scale with your needs
+          Explore our different pricing plans
+          {/* Our pricing is designed to scale with your needs */}
         </p>
 
         <div className="flex space-x-4 justify-center items-center mb-8 ">
@@ -33,7 +33,7 @@ const PricingSection = () => {
               {/* Free Tier */}
               <Card className="md:col-span-3 lg:col-start-2 lg:col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
-                  <CardTitle>Free</CardTitle>
+                  <CardTitle>Open Source</CardTitle>
                   <CardDescription>Perfect for getting started</CardDescription>
                 </CardHeader>
 
@@ -42,7 +42,7 @@ const PricingSection = () => {
               </div> */}
 
                 <CardContent>
-                  <ul className="space-y-4">
+                  {/* <ul className="space-y-4">
 
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
@@ -58,13 +58,60 @@ const PricingSection = () => {
                     </li>
                     <li className="flex items-center">
                       <X className="mr-2 h-4 w-4 text-red-500" />
-                      Advanced tools
+                      Control
                     </li>
                     <li className="flex items-center">
                       <X className="mr-2 h-4 w-4 text-red-500" />
-                      Reporting and analytics
+                      Scalability
                     </li>
-                  </ul>
+                    <li className="flex items-center">
+                      <X className="mr-2 h-4 w-4 text-red-500" />
+                      Support
+                    </li>
+                  </ul> */}
+
+                  <div className="grid grid-cols-1">
+                    {/* <div className="m-1">
+                      <p className="flex items-center my-2">
+                        Control
+                      </p>
+                      <ul className="space-y-2 text-sm">
+
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Limited access to features
+                        </li>
+                      </ul>
+                    </div> */}
+
+                    <div className="m-1">
+                      <p className="flex items-center my-2">
+                      Control and Scalability
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Limited access to features
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="m-1">
+                      <p className="flex items-center my-2">
+                        Support
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          Community support
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          Basic tutorials
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                   <Button className="w-full mt-6">Get Started</Button>
                 </CardContent>
               </Card>
@@ -79,7 +126,7 @@ const PricingSection = () => {
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2">
 
-                  <div className="m-1">
+                    <div className="m-1">
                       <p className="flex items-center my-2">
                         Control
                       </p>
@@ -87,7 +134,7 @@ const PricingSection = () => {
 
                         <li className="flex items-center">
                           <Check className="mr-2 h-4 w-4 text-green-500 " />
-                          Access to OpenAI's apis
+                          Access to OpenAI's APIs
                         </li>
                         <li className="flex items-center">
                           <Check className="mr-2 h-4 w-4 text-green-500" />
@@ -97,13 +144,13 @@ const PricingSection = () => {
                           <Check className="mr-2 h-4 w-4 text-green-500" />
                           Performance Monitoring
                         </li>
-                        <li className="flex items-center">
+                        {/* <li className="flex items-center">
                           <Check className="mr-2 h-4 w-4 text-green-500" />
                           Automation Chat Support
-                        </li>
+                        </li> */}
                       </ul>
                     </div>
-                    
+
                     <div className="m-1">
                       <p className="flex items-center my-2">
                         Scalability
@@ -128,7 +175,7 @@ const PricingSection = () => {
                       </ul>
                     </div>
 
-                   
+
 
                     <div className="m-1">
                       <p className="flex items-center my-2">
@@ -347,7 +394,7 @@ const PricingSection = () => {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Designing and creating software architechture
+                      Designing software architechture
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
@@ -361,7 +408,7 @@ const PricingSection = () => {
           }
         </>
 
-        <div className="flex justify-center gap-4 my-6">
+        <div className="flex justify-center gap-4 py-6">
           <Button variant="secondary" className="hover-lift" size="lg" onClick={() => navigate(`details/${screen}`)}>
             Learn More
           </Button>

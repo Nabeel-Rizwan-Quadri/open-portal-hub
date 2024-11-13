@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, Box, Workflow, Code, Zap, GitMerge, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, Rows } from "lucide-react";
+import { ArrowRight, Box, Workflow, Code, Zap, GitMerge, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, TrendingUp, MonitorCog, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
 import Apidocs from "../images/solutions/apidocs.png"
@@ -10,7 +10,7 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Solutions = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,7 +42,7 @@ const Solutions = () => {
               of Automation
             </h1>
             <p className="text-xl text-gray-400  px-4 sm:px-0">
-              Elevate your business workflow with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
+              Elevate your business workflows with our powerful automation suite, crafted for seamless scalability, top-tier security, and easy integration with your current systems.
             </p>
             <p className="text-xl text-gray-400 mb-8 px-4 sm:px-0">
               Unlock efficiency and drive growth effortlessly.
@@ -61,7 +61,7 @@ const Solutions = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="scroll-fade-in space-y-6">
               <h2 className="text-3xl font-bold mb-6">
-                OpenCore: Advanced Process Orchestration
+                OpenCore: Dynamic Process Orchestration
               </h2>
               <p className="text-gray-400">
                 A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software you love. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
@@ -95,9 +95,9 @@ const Solutions = () => {
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Versatile Automation Toolkit</h3>
                 <p className="text-gray-400">
-                  Leverage the Power of Code for Advanced Automation, or Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Seamlessly Together.
+                  Leverage the Power of Code for Advanced Automation, or Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Together Seamlessly.
                 </p>
-                <Button className="mt-6 w-full" size="lg">
+                <Button className="mt-6 w-full" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
                   Learn More
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -179,13 +179,13 @@ const Solutions = () => {
             <div className="space-y-6 scroll-fade-in">
               <h2 className="text-3xl font-bold">Scale Your Automation Effortlessly</h2>
               <p className="text-gray-400">
-                Increase your business efficiency with automation and monitoring tools. Use grafana for data vissualization, git for keeping track of you code, kubernetes for seamless automation and much more.
+                Boost efficiency with OpenIAP’s scalable platform. Easily create modular code and workflows for reusable deployment to different use cases. Foster collaboration between low-code users and developers with our SDKs, supporting seven major programming languages. With Kubernetes for deployment and Grafana for data visualization, scaling your automation has never been easier.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: <ChartColumn />, text: "Grafana" },
                   { icon: <ShipWheel />, text: "kubernetes" },
-                  { icon: <Rows />, text: "Task Automation" },
+                  { icon: <Code />, text: "Multi-Language Support" },
                   { icon: <GitMerge />, text: "Git" }
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
@@ -196,21 +196,30 @@ const Solutions = () => {
               </div>
             </div>
             <div className="scroll-fade-in">
-              <img
-                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
-                alt="Automation Robot"
-                className="rounded-lg shadow-xl"
-              />
+              <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
+                {/* <TrendingUp className="w-full h-48 text-customGreen mb-4" /> */}
+                <Icon icon="tdesign:upscale" className="w-full h-48 text-customGreen mb-4" />
+                <h3 className="text-xl font-semibold mb-4">Integrate with the Software you Love</h3>
+                <p className="text-gray-400">
+                  Using code or NodeRed you can connect to your favourite solutions and systems with over 4000 APIs.
+                </p>
+                <Button className="mt-6 w-full" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
+                  Get Started Now
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
+
+
       </section>
 
       {/* Section Eight: Developer Tools */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Developer Tools</h2>
+            <h2 className="text-3xl font-bold text-center mb-14">Developer Tools</h2>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
@@ -221,7 +230,7 @@ const Solutions = () => {
                 },
                 {
                   title: "API Documentation",
-                  description: "Comprehensive API documentation with interactive examples and SDKs for major programming languages.",
+                  description: "Comprehensive API documentation with interactive examples and SDKs for seven major programming languages.",
                   image: Apidocs,
                   redirectTo: "https://docs.openiap.io/"
                 },
@@ -244,16 +253,17 @@ const Solutions = () => {
       </section>
 
       {/* Section Six: Analytics Dashboard */}
-      {/* <section className="py-20 px-4 gradient-bg">
+      <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
-          <div className="text-center mb-12 scroll-bounce opacity-0 transition-all duration-700">
-            <h2 className="text-3xl font-bold mb-4">Orchestrate RPA</h2>
-            <p className="text-gray-400 max-w-3xl mx-auto">
-              Leverage OpenCore to orchestrate the OpenRAP tool, with OpenRPA available as an alternative solution.
+          <div className="text-center scroll-bounce opacity-0 transition-all duration-700 flex flex-col items-center">
+            <h2 className="text-3xl font-bold mb-4 max-w-4xl text-center">Orchestrate your Favourite RPA Solution through OpenCore or use our Proprietary Open Source Solution</h2>
+            <p className="text-gray-400 max-w-4xl mx-auto">
+              {/* Use our Proprietary Open Source Solution */}
+              Use whatever you know, whatever you love, or use OpenRPA!
             </p>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Section Seven: Process Automation */}
       {/* <section className="py-20 px-4 gradient-bg">
@@ -290,10 +300,10 @@ const Solutions = () => {
 
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
                 {[
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Intuitive Interface" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Smart Recording" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "Cross-Platform" },
-                  { icon: <Box className="h-5 w-5 text-customGreen" />, text: "AI-Powered" }
+                  { icon: <MonitorCog className="h-5 w-5 text-customGreen" />, text: "Intuitive Interface" },
+                  { icon: <Play className="h-5 w-5 text-customGreen" />, text: "Smart Recording" },
+                  { icon: <TrendingUp className="h-5 w-5 text-customGreen" />, text: "Easy to Scale" },
+                  { icon: <Icon icon="ri:drag-drop-line" className="h-5 w-5 text-customGreen" />, text: "Drag and Drop" }
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-800 hover:border-customGreen transition-all">
                     {feature.icon}
@@ -317,7 +327,7 @@ const Solutions = () => {
                 <Zap className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Low-Code Automation Builder</h3>
                 <p className="text-gray-400">
-                  Create powerful automation workflows without the need to write code. Perfect for business users
+                  Create powerful automation workflows without the need to write code. Perfect for users
                   who want to automate repetitive tasks quickly and efficiently.
                 </p>
                 <Button className="mt-6 w-full" size="lg" variant="outline" onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>

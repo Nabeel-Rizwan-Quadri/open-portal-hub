@@ -3,14 +3,14 @@ import openiap from "../images/opencore.png";
 import { useEffect, useState } from "react";
 
 const features = [
-  { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run your code anywhere, with easy redeployment" },
-  { icon: <RefreshCcw className="h-6 w-6 text-customGreen" />, text: "Work Items", subText: "Use work items to perform back-to-back tasks" },
-  { icon: <LockKeyhole className="h-6 w-6 text-customGreen" />, text: "Access Control", subText: "All data and agents are protected with granular access control lists of your choice" },
-  { icon: <Bot className="h-6 w-6 text-customGreen" />, text: "AI Chatbot", subText: "'talk' to your agents and data from ChatGPT or using local LLM's" },
-  { icon: <Unplug className="h-6 w-6 text-customGreen" />, text: "API Integration", subText: "API's available in all major programing languages" },
-  { icon: <Code className="h-6 w-6 text-customGreen" />, text: "Low-Code Functions", subText: "Leverage our low-code functions to focus more on bussiness logic" },
-  { icon: <FileStack className="h-6 w-6 text-customGreen" />, text: "Version Control", subText: "Keep track of the changes in your data" },
-  { icon: <ChartLine className="h-6 w-6 text-customGreen" />, text: "Data Visualization", subText: "Use grafana to easily vissualize your data in different graphs" },
+  { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run your code anywhere with easy redeployment" },
+  { icon: <RefreshCcw className="h-6 w-6 text-customGreen" />, text: "Work Items", subText: "Use Work Items to perform back-to-back tasks" },
+  { icon: <LockKeyhole className="h-6 w-6 text-customGreen" />, text: "Access Control", subText: "All Data and Agents are protected with granular Access Control lists of your choice" },
+  { icon: <Bot className="h-6 w-6 text-customGreen" />, text: "AI Chatbot", subText: "'Talk' to your Agents and Data with ChatGPT or using local LLM's" },
+  { icon: <Unplug className="h-6 w-6 text-customGreen" />, text: "API Integration", subText: "API's available in nodered and all major programing languages" },
+  { icon: <Code className="h-6 w-6 text-customGreen" />, text: "Low-Code Functions", subText: "Leverage our Low-Code Functions to focus more on bussiness logic" },
+  { icon: <FileStack className="h-6 w-6 text-customGreen" />, text: "Version Control", subText: "Keep track of the changes in your Data" },
+  { icon: <ChartLine className="h-6 w-6 text-customGreen" />, text: "Data Visualization", subText: "Use Grafana to easily visualize your Data in customizable graphs" },
 ];
 
 const CircularFeatures = () => {

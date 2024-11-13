@@ -5,7 +5,7 @@ const steps = [
   {
     number: "Step #1",
     title: "Design Your Workflow",
-    description: "Start with software robots or use our orchestrator to manage multiple workflows processes"
+    description: "Start with software robots or use our orchestrator to manage multiple workflows"
   },
   {
     number: "Step #2",
