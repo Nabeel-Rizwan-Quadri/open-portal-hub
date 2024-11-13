@@ -6,24 +6,24 @@ import logo3 from "../images/testimonials/synerg.png"
 
 const Testimonials = () => {
   return (
-    <section className="px-4 pb-20">
+    <section className="py-20 px-4">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-20 text-center animate-fade-in">
           Customer Sucess Stories
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div className="p-6 border border-testLogoBlue rounded-xl gradient-bg  flex flex-col items-center">
+          <div className="p-6 border border-customGreen rounded-xl bg-slate-50 opacity-80  flex flex-col items-center">
             <div className="image-container">
               <img src={logo1} width={200} className="logo-img" />
             </div>
-            <p className="text-white text-justify mt-6">“The most important characters of the OpenIAP suite is the functional capacity of the software, its solidity against volumes, its scalability in implementing very diverse functions, and its scalability in addressing any type of format and sources.“</p>
-            <h3 className="text-testLogoBlue text-xl place-self-start mt-6"> - Global Head of Indirect Tax</h3>
+            <p className="text-black text-justify mt-6">“The most important characters of the OpenIAP suite is the functional capacity of the software, its solidity against volumes, its scalability in implementing very diverse functions, and its scalability in addressing any type of format and sources.“</p>
+            <h3 className="text-test2LogoBlue text-xl place-self-start mt-6 font-bold"> - Global Head of Indirect Tax</h3>
           </div>
 
-          <div className="p-6 border border-testLogoBlue rounded-xl gradient-bg  flex flex-col items-center ">
+          <div className="p-6 border border-customGreen rounded-xl bg-slate-50 opacity-80 flex flex-col items-center ">
             <img src={logo3} width={190} />
-            <p className="text-white text-justify mt-4">“The Team at OpenIAP is always available to assist us with innovative ways to solve some of the obstacles we have encountered and the Speed at which new features are added to the platform is astounding.”</p>
-            <h3 className="text-testLogoBlue text-xl place-self-start mt-6"> - Head of ITS & HCM</h3>
+            <p className="text-black text-justify mt-4">“The Team at OpenIAP is always available to assist us with innovative ways to solve some of the obstacles we have encountered and the Speed at which new features are added to the platform is astounding.”</p>
+            <h3 className="text-test1LogoBlue text-xl place-self-start mt-6 font-bold"> - Head of ITS & HCM</h3>
           </div>
           {/* <Card className="p-6 scroll-fade-in hover:border-customGreen transition-all duration-300">
             <a target="_blank" rel="noopener noreferrer"

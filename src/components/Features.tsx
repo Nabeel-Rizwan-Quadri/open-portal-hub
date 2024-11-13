@@ -1,6 +1,7 @@
 import { Cloud, Lock, Settings, Share, Building, Gauge } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   {
@@ -37,6 +38,7 @@ const features = [
 ];
 
 const Features = () => {
+  const navigate = useNavigate();
   const featuresRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -81,7 +83,7 @@ const Features = () => {
         </div>
 
         <div className="text-center mt-16 scroll-fade-in">
-          <Button size="lg" className="hover-lift">
+          <Button size="lg" className="hover-lift" onClick={() => navigate("/solutions")}>
             Learn More
           </Button>
         </div>

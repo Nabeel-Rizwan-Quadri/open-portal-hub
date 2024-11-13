@@ -8,7 +8,7 @@ const Telemetry = () => {
 
     return (
         <>
-            <div className="px-4 pt-20  gradient-bg md:h-screen flex justify-center items-center">
+            <div className="px-4 pt-20  gradient-bg md:h-screen">
                 <div className="container mx-auto text-start">
                     <div className="text-customGreen mb-4 text-3xl">
                         TELEMETRY

@@ -1,11 +1,9 @@
 import { Github, MessageSquare, Users, Youtube } from "lucide-react";
 import { Card } from "./ui/card";
-import Testimonials from "./Testimonials";
 
 const Community = () => {
   return (
     <section className="py-20 px-4 gradient-bg">
-      <Testimonials />
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center animate-fade-in">
           Join Our Community

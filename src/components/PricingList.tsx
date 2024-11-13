@@ -10,7 +10,7 @@ const PricingSection = () => {
   const [screen, setScreen] = useState(1);
 
   return (
-    <section className="pt-24 md:min-h-screen px-4 gradient-bg flex flex-col justify-center">
+    <section className="pt-24 md:min-h-screen px-4 gradient-bg">
       <div className="container mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center animate-fade-in">
           Flexible Pricing for Everyone
@@ -31,7 +31,7 @@ const PricingSection = () => {
           {
             screen === 1 && <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mx-auto">
               {/* Free Tier */}
-              <Card className="col-start-2 col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+              <Card className="md:col-span-3 lg:col-start-2 lg:col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Free</CardTitle>
                   <CardDescription>Perfect for getting started</CardDescription>
@@ -70,73 +70,91 @@ const PricingSection = () => {
               </Card>
 
               {/* Enterprise Tier */}
-              <Card className="col-start-4 col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+              <Card className="md:col-span-3 lg:col-start-4 lg:col-span-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Enterprise</CardTitle>
                   <CardDescription>Custom solutions</CardDescription>
                   {/* <div className="text-3xl font-bold mt-4">Tailored pricing</div> */}
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      Scalability
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Custom AI Chatbot
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Kubernetes
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Git
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Grafana
-                    </li>
-                    <li className="flex items-center">
-                      Control
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Access to OpenAI's apis
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Reporting
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Performance Monitoring
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Automation Chat Support
-                    </li>
-                    <li className="flex items-center">
-                      Support
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500" />
-                      SLA
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Priority Support
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Prod Dev Roadmap
-                    </li>
-                    <li className="flex items-center">
-                      <Check className="mr-2 h-4 w-4 text-green-500 " />
-                      Access to Dev Team
-                    </li>
+                  <div className="grid grid-cols-1 md:grid-cols-2">
 
-                  </ul>
+                  <div className="m-1">
+                      <p className="flex items-center my-2">
+                        Control
+                      </p>
+                      <ul className="space-y-2 text-sm">
+
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Access to OpenAI's apis
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          Reporting
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          Performance Monitoring
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          Automation Chat Support
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div className="m-1">
+                      <p className="flex items-center my-2">
+                        Scalability
+                      </p>
+                      <ul className="space-y-2 text-sm">
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Custom AI Chatbot
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Kubernetes
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Git
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Grafana
+                        </li>
+                      </ul>
+                    </div>
+
+                   
+
+                    <div className="m-1">
+                      <p className="flex items-center my-2">
+                        Support
+                      </p>
+                      <ul className="space-y-2 text-sm">
+
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500" />
+                          SLA
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Priority Support
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Prod Dev Roadmap
+                        </li>
+                        <li className="flex items-center">
+                          <Check className="mr-2 h-4 w-4 text-green-500 " />
+                          Access to Dev Team
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                   <Button className="w-full mt-6">Contact Sales</Button>
                 </CardContent>
               </Card>
@@ -144,7 +162,7 @@ const PricingSection = () => {
           }
 
           {
-            screen === 2 && <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mx-auto">
+            screen === 2 && <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-auto">
               {/* Free plan */}
               <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
@@ -304,9 +322,9 @@ const PricingSection = () => {
           }
 
           {
-            screen === 3 && <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto">
+            screen === 3 && <div className="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-3 gap-4 mx-auto">
               {/* Free Tier */}
-              <Card className="col-start-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
+              <Card className="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Hourly</CardTitle>
                   <CardDescription>Perfect for onbording developers</CardDescription>
@@ -350,7 +368,7 @@ const PricingSection = () => {
         </div>
 
       </div>
-    </section>
+    </section >
   );
 };
 

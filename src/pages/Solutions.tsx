@@ -10,7 +10,7 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Solutions = () => {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -22,7 +22,7 @@ const Solutions = () => {
       { threshold: 0.1 }
     );
 
-    const elements = document.querySelectorAll(".scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-zoom-in, .scroll-rotate-in, .scroll-bounce");
+    const elements = document.querySelectorAll(".scroll-fade-in, .scroll-zoom-in, .scroll-rotate-in, .scroll-bounce");
     elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
@@ -59,7 +59,7 @@ const Solutions = () => {
       <section className="py-10 px-4">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="scroll-slide-left space-y-6">
+            <div className="scroll-fade-in space-y-6">
               <h2 className="text-3xl font-bold mb-6">
                 OpenCore: Advanced Process Orchestration
               </h2>
@@ -90,7 +90,7 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-            <div className="scroll-slide-right">
+            <div className="scroll-fade-in">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Versatile Automation Toolkit</h3>
@@ -176,7 +176,7 @@ const Solutions = () => {
       <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 scroll-slide-left">
+            <div className="space-y-6 scroll-fade-in">
               <h2 className="text-3xl font-bold">Scale Your Automation Effortlessly</h2>
               <p className="text-gray-400">
                 Increase your business efficiency with automation and monitoring tools. Use grafana for data vissualization, git for keeping track of you code, kubernetes for seamless automation and much more.
@@ -190,12 +190,12 @@ const Solutions = () => {
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
                     {feature.icon}
-                    <span>{feature.text}</span>
+                    <span className="text-sm md:text-base">{feature.text}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="scroll-slide-right">
+            <div className="scroll-fade-in">
               <img
                 src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
                 alt="Automation Robot"
@@ -256,44 +256,31 @@ const Solutions = () => {
       </section> */}
 
       {/* Section Seven: Process Automation */}
-      <section className="py-20 px-4 gradient-bg">
+      {/* <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="scroll-slide-left">
+            <div className="scroll-fade-in">
               <img
                 src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e"
                 alt="Automation Robot"
                 className="rounded-lg shadow-xl"
               />
             </div>
-            <div className="space-y-6 scroll-slide-right">
+            <div className="space-y-6 scroll-fade-in">
               <h2 className="text-3xl font-bold">Orchestrate RPA</h2>
               <p className="text-gray-400">
-                Leverage OpenCore to orchestrate the OpenRAP tool, with OpenRPA available as an alternative solution. Connect with you favourite RPA solution with OpenRPA and seamlessly operate... . Works offline as well for maximum privacy.
+                Leverage OpenCore to orchestrate the OpenRPA tool, with OpenRPA available as an alternative solution. Connect with you favourite RPA solution with OpenRPA and seamlessly operate... . Works offline as well for maximum privacy.
               </p>
-              {/* <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: <ChartColumn />, text: "Grafana" },
-                  { icon: <ShipWheel />, text: "kubernetes" },
-                  { icon: <Rows />, text: "Task Automation" },
-                  { icon: <GitMerge />, text: "Git" }
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
-                    {feature.icon}
-                    <span>{feature.text}</span>
-                  </div>
-                ))}
-              </div> */}
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section Three: OpenRPA */}
       <section className="py-20 px-4 bg-gradient-to-b from-background to-gray-900">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 scroll-slide-left space-y-6">
+            <div className="order-2 lg:order-1 scroll-fade-in space-y-6">
               <h2 className="text-3xl font-bold mb-6">
                 OpenRPA: Robotic Process Automation
               </h2>
@@ -325,9 +312,8 @@ const Solutions = () => {
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2 scroll-slide-right">
+            <div className="order-1 lg:order-2 scroll-fade-in">
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
-                {/* <Code className="w-full h-48 text-customGreen mb-4" /> */}
                 <Zap className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Low-Code Automation Builder</h3>
                 <p className="text-gray-400">

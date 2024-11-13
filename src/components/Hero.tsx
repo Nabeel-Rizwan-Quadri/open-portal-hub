@@ -7,10 +7,10 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Hero = () => {
   return (
-    <div className="px-4 gradient-bg h-screen flex justify-center items-center" >
+    <div className="pt-14 md:Pt-0 px-4 gradient-bg h-screen flex justify-center items-center" >
       <div className="container mx-auto text-center">
         <div
-          className="absolute bottom-0 left-0 w-full h-2/6 bg-no-repeat opacity-50 hero-img"
+          className="hidden md:block absolute bottom-0 left-0 w-full h-2/6 bg-no-repeat opacity-50 hero-img"
           style={{
             backgroundImage: `url(${hero})`,
             width: "100%"
@@ -26,7 +26,7 @@ const Hero = () => {
             Platform
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto animate-fade-in">
-            Orchestrate and Scale your Workflows in Seamless Collaboration Between Humans, Robots, Systems, and Devices.
+            Orchestrate and Scale your Workflows in Seamless Collaboration Between Humans, Robots, Systems and Devices.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in">
             <Button variant="outline" className="hover-lift border border-customGreen" size="lg" onClick={() => window.open('https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi', '_blank', 'noopener,noreferrer')} >

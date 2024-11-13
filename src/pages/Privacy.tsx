@@ -8,8 +8,8 @@ const Privacy = () => {
 
     return (
         <>
-            <div className="px-4 pt-20 md:pt-0 gradient-bg md:h-screen flex items-center">
-                <div className="container mx-auto text-start">
+            <div className="px-4 pt-20 h-screen gradient-bg ">
+                <div className="container mx-auto text-start mb-10">
                     <div className="text-customGreen mb-4 text-3xl">
                         Privacy Policy
                     </div>

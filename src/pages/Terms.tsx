@@ -9,10 +9,10 @@ const Terms = () => {
 
     return (
         <>
-            <div className="px-4 pt-20 gradient-bg">
+            <div className="px-4 pt-20 gradient-bg flex items-center">
                 <div className="container mx-auto text-start">
 
-                    <div className="my-10">
+                    <div className="mb-10">
                         <div className="text-customGreen mb-4 text-3xl">
                             Terms of Use
                         </div>
@@ -348,7 +348,7 @@ const Terms = () => {
                         </div>
                     </div>
 
-                    <div className="my-10 pb-10">
+                    <div className="my-10">
                         <div className="text-customGreen mb-4 text-xl">
                             Choice of Law and Jurisdiction
                         </div>

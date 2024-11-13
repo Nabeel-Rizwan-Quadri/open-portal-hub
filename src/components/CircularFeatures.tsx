@@ -1,5 +1,6 @@
 import { ArrowUp, ArrowUpRight, ArrowRight, ArrowDownRight, ArrowDown, ArrowDownLeft, ArrowLeft, ArrowUpLeft, FileStack, Code, ChartLine, Bot, LockKeyhole, Unplug, RefreshCcw, UsersRound } from "lucide-react";
 import openiap from "../images/opencore.png";
+import { useEffect, useState } from "react";
 
 const features = [
   { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run your code anywhere, with easy redeployment" },
@@ -13,61 +14,107 @@ const features = [
 ];
 
 const CircularFeatures = () => {
+
+  //   const [ismobile, setIsMobile] = useState(false);
+  //   useEffect(() => {
+  //     // Function to check if the viewport is mobile size
+  //     const checkIfMobile = () => {
+  //       // if (window.innerWidth <= 768) {
+
+  //       // }
+  //       setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+  //     };
+
+  //     // Initial check
+  //     checkIfMobile();
+
+  //     // Add event listener on resize
+  //     window.addEventListener('resize', checkIfMobile);
+
+  //     // Cleanup event listener on component unmount
+  //     return () => window.removeEventListener('resize', checkIfMobile);
+  //   }, []);
+
   return (
     <section className="py-10 px-4 gradient-bg ">
-      <div className="container mx-auto">
-        <div className="relative w-full max-w-3xl mx-auto h-[600px]">
-          {/* Center image with pulse animation */}
-          {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-40  flex items-center justify-center">
-        <div className="text-xl font-bold text-center animate-fade-in">
-          <img src={openiap} width={400} className="filter blur-sm"/>
-        </div>
-      </div> */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen hover:animate-none opacity-50">
-            <div className="text-xl font-bold text-center animate-fade-in text-customGreen">OpenCore</div>
+      <div className="md:container mx-auto">
+        <div className="relative w-full max-w-3xl mx-auto md:h-[600px]">
+
+          <div className="md:hidden ">
+            <div className="flex justify-center">
+              <div className="w-32 h-32 my-6 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen opacity-50 ">
+                <div className="text-base font-bold text-center animate-fade-in text-customGreen">OpenCore</div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 justify-center">
+              {features.map((feature, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="text-center transition-all duration-300 m-2"
+                  >
+                    <div className="relative w-full h-32 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card border border-gray-700">
+                      <div className="text-sm absolute inset-0 w-full h-full flex flex-col space-y-4 justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0 ">
+                        <p>
+                          {feature.icon}
+                        </p>
+                        <p>
+                          {feature.text}
+                        </p>
+                      </div>
+                      <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
+                        {feature.subText}
+
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Features positioned in a circle with staggered fade-in and rotation */}
-          {features.map((feature, index) => {
-            const angle = (index * 360) / features.length;
-            const radius = 250;
-            const radian = (angle * Math.PI) / 180;
-            const left = `calc(48% + ${Math.cos(radian) * radius}px)`;
-            const top = `calc(50% + ${Math.sin(radian) * radius}px)`;
-            const delay = index * 0.1; // Stagger the animations
+          {/* large screen */}
+          <div className="hidden md:block">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gray-800 rounded-full flex items-center justify-center border-2 border-customGreen hover:animate-none opacity-50">
+              <div className="text-xl font-bold text-center animate-fade-in text-customGreen">OpenCore</div>
+            </div>
+            {features.map((feature, index) => {
+              const angle = (index * 360) / features.length;
+              const radius = 250;
+              const radian = (angle * Math.PI) / 180;
+              const left = `calc(48% + ${Math.cos(radian) * radius}px)`;
+              const top = `calc(50% + ${Math.sin(radian) * radius}px)`;
+              const delay = index * 0.1;
 
-            return (
-              <div
-                key={index}
-                // className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 text-sm"
-                className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 hover:scale-110"
-                style={{
-                  left,
-                  top,
-                  animation: `fadeRotateIn 0.6s ease-out ${delay}s backwards`,
-                }}
-              >
-                <div className="relative w-40 h-32 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card border border-gray-700">
-                  <div className="text-sm absolute inset-0 w-full h-full flex flex-col space-y-4 justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0 ">
-                    <p>
-                      {feature.icon}
-                    </p>
-                    <p>
-                      {feature.text}
-                    </p>
-                  </div>
-                  <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
-                    {feature.subText || "BACK OF CARD"}
+              return (
+                <div
+                  key={index}
+                  className="absolute w-32 -translate-x-1/2 -translate-y-1/2 text-center transition-all duration-300 hover:scale-110"
+                  style={{
+                    left,
+                    top,
+                    animation: `fadeRotateIn 0.6s ease-out ${delay}s backwards`,
+                  }}
+                >
+                  <div className="relative  w-40 h-32 rounded-2xl text-white overflow-hidden cursor-pointer transition-all duration-700 card border border-gray-700">
+                    <div className="text-sm absolute inset-0 w-full h-full flex flex-col space-y-4 justify-center items-center bg-gray-900 transition-all duration-100 delay-200 z-20 hover:opacity-0 ">
+                      <p>
+                        {feature.icon}
+                      </p>
+                      <p>
+                        {feature.text}
+                      </p>
+                    </div>
+                    <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
+                      {feature.subText}
 
+                    </div>
                   </div>
                 </div>
-                {/* <div className="bg-gray-800/50 p-5 rounded-lg border border-gray-700 hover:border-customGreen hover:rotate-0 transition-all duration-300">
-              {feature.icon}
-              <p className="mt-2 text-sm">{feature.text}</p>
-            </div> */}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

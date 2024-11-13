@@ -3,7 +3,8 @@ import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import Community from "@/components/Community";
-import Compatible from "@/components/Compatible";
+// import Compatible from "@/components/Compatible";
+import Testimonials from "@/components/Testimonials";
 
 const Index = () => {
   useEffect(() => {
@@ -14,7 +15,9 @@ const Index = () => {
       <Hero />
       <Features />
       <HowItWorks />
-      <Compatible />
+      {/* <Compatible /> */}
+      <Testimonials />
+
       <Community />
     </>
   );

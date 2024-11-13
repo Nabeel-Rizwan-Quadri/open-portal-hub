@@ -47,9 +47,9 @@ const HowItWorks = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="relative scroll-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
+            <div key={index} className="hover-float-parent relative scroll-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="feature-card h-full">
-                <span className="lg:text-5xl text-4xl font-bold text-customGreen opacity-50 mb-4 block float-animation">
+                <span className="lg:text-5xl text-4xl font-bold text-customGreen opacity-50 mb-4 block hover-float">
                   {step.number}
                 </span>
                 <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
@@ -65,7 +65,7 @@ const HowItWorks = () => {
         </div>
 
         <div className="text-center mt-16 scroll-fade-in">
-          <Button size="lg" className="hover-lift">
+          <Button size="lg" className="hover-lift" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>
             Start Building Now
           </Button>
         </div>
