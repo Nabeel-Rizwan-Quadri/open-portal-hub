@@ -10,7 +10,7 @@ let iconClass = 'flex flex-col items-center justify-center space-y-2 cursor-poin
 
 const Solutions = () => {
   useEffect(() => {
-    // window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -63,7 +63,7 @@ const Solutions = () => {
               <h2 className="text-3xl font-bold mb-6">
                 OpenCore: Dynamic Process Orchestration
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-justify">
                 A versatile and secure orchestration platform designed to integrate seamlessly with your existing RPA, CRM, ERP, SCM, and other software you love. Run it in the cloud or on-premise with comprehensive coding support, allowing developers to work with their preferred languages and in familiar environments.
               </p>
               <div className="grid sm:grid-cols-2 gap-4 mt-8">
@@ -94,7 +94,7 @@ const Solutions = () => {
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
                 <Workflow className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Versatile Automation Toolkit</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 text-justify">
                   Leverage the Power of Code for Advanced Automation, or Drag-and-Drop Functions for Simpler Workflows; Empowering Both Developers and Non-Technical Users to Work Together Seamlessly.
                 </p>
                 <Button className="mt-6 w-full" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
@@ -149,8 +149,8 @@ const Solutions = () => {
             </div>
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
-              <p className="text-gray-400">
-                We partner with institutions in the most highly regulated sectors, where stringent, annual security audits are mandatory—and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, role-based access control, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
+              <p className="text-gray-400 text-justify">
+                We partner with institutions in the most highly regulated sectors. Stringent annual security audits are mandatory and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, role-based access control, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
               </p>
               <ul className="space-y-4">
                 {[
@@ -178,7 +178,7 @@ const Solutions = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 scroll-fade-in">
               <h2 className="text-3xl font-bold">Scale Your Automation Effortlessly</h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-justify">
                 Boost efficiency with OpenIAP’s scalable platform. Easily create modular code and workflows for reusable deployment to different use cases. Foster collaboration between low-code users and developers with our SDKs, supporting seven major programming languages. With Kubernetes for deployment and Grafana for data visualization, scaling your automation has never been easier.
               </p>
               <div className="grid grid-cols-2 gap-4">
@@ -200,7 +200,7 @@ const Solutions = () => {
                 {/* <TrendingUp className="w-full h-48 text-customGreen mb-4" /> */}
                 <Icon icon="tdesign:upscale" className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Integrate with the Software you Love</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 text-justify">
                   Using code or NodeRed you can connect to your favourite solutions and systems with over 4000 APIs.
                 </p>
                 <Button className="mt-6 w-full" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
@@ -242,7 +242,7 @@ const Solutions = () => {
                     <img src={item.image} alt={item.title} className="w-full opacity-50" />
                     <div className="p-6 w0full">
                       <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-gray-400">{item.description}</p>
+                      <p className="text-gray-400 ">{item.description}</p>
                     </div>
                   </div>
                 </div>
@@ -294,7 +294,7 @@ const Solutions = () => {
               <h2 className="text-3xl font-bold mb-6">
                 OpenRPA: Robotic Process Automation
               </h2>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-justify">
                 Empower your team with our advanced, user-friendly RPA solution, designed for both speed and scalability. Build, deploy, and optimize automations faster than ever with our intuitive visual interface and an extensive library of pre-built components. Seamlessly integrate with OpenCore to enhance performance across all systems and scale operations effortlessly, bringing enterprise-grade capabilities to every automation.
               </p>
 
@@ -326,11 +326,11 @@ const Solutions = () => {
               <div className="p-6 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50">
                 <Zap className="w-full h-48 text-customGreen mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Low-Code Automation Builder</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 text-justify">
                   Create powerful automation workflows without the need to write code. Perfect for users
                   who want to automate repetitive tasks quickly and efficiently.
                 </p>
-                <Button className="mt-6 w-full" size="lg" variant="outline" onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
+                <Button className="mt-6 w-full" size="lg" variant="outline" onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/videos', '_blank', 'noopener,noreferrer')}>
                   Watch Tutorial
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>

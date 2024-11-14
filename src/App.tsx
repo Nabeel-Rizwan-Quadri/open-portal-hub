@@ -13,6 +13,7 @@ import Terms from "./pages/Terms";
 import Telemetry from "./pages/Telemetry";
 import Partners from "./pages/Partners";
 import PricingDetails from "./pages/PricingDetails";
+import UseCases from "./pages/UseCases";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,8 @@ const App = () => (
             <Route path="/terms" element={<Terms />} />
             <Route path="/telemetry" element={<Telemetry />} />
             <Route path="/partners" element={<Partners />} />
+
+            <Route path="/usecases" element={<UseCases />} />
 
           </Route>
         </Routes>

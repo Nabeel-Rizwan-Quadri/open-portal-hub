@@ -16,7 +16,7 @@ const Hero = () => {
             width: "100%"
           }}
         ></div>
-        <div className="">
+        <div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
 
             Open Source{" "}
@@ -37,8 +37,8 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className="flex justify-center mt-10 space-x-4">
-          <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/', '_blank', 'noopener,noreferrer')}>
+        <div className="flex justify-center mt-10 space-x-4 relative items-center">
+          <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/videos', '_blank', 'noopener,noreferrer')}>
             <Icon icon="mdi:youtube" width={30} height={30} />
             <p>Youtube</p>
           </div>
