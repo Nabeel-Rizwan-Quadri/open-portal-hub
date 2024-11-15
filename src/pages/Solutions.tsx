@@ -150,12 +150,12 @@ const Solutions = () => {
             <div className="md:w-1/2 space-y-6">
               <h2 className="text-3xl font-bold">Enterprise-Grade Security</h2>
               <p className="text-gray-400 text-justify">
-                We partner with institutions in the most highly regulated sectors. Stringent annual security audits are mandatory and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, role-based access control, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
+                We partner with institutions in the most highly regulated sectors. Stringent annual security audits are mandatory and OpenCore consistently delivers exceptional results. With advanced, built-in security features such as end-to-end encryption, access control lists, and rigorous adherence to industry-leading security standards, OpenCore provides a level of data protection that instills confidence and meets the highest professional standards.
               </p>
               <ul className="space-y-4">
                 {[
                   "End-to-end encryption",
-                  "Role-based access control",
+                  "Access control lists",
                   "Audit logging",
                   "Compliance certifications"
                 ].map((item, index) => (
@@ -256,9 +256,8 @@ const Solutions = () => {
       <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="text-center scroll-bounce opacity-0 transition-all duration-700 flex flex-col items-center">
-            <h2 className="text-3xl font-bold mb-4 max-w-4xl text-center">Orchestrate your Favourite RPA Solution through OpenCore or use our Proprietary Open Source Solution</h2>
+            <h2 className="text-3xl font-bold mb-4 max-w-4xl text-center">Orchestrate your Favourite RPA Solution through OpenCore or use our Open Source Solution</h2>
             <p className="text-gray-400 max-w-4xl mx-auto">
-              {/* Use our Proprietary Open Source Solution */}
               Use whatever you know, whatever you love, or use OpenRPA!
             </p>
           </div>

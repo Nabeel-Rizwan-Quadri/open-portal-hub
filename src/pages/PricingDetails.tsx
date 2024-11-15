@@ -110,7 +110,7 @@ const Privacy = () => {
                                 <Button variant="secondary" className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
                                     Get Started <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
-                                <Button className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
+                                <Button className="hover-lift" size="lg" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')} >
                                     Schedule a Meeting <CalendarFold className="ml-2 h-5 w-5" />
                                 </Button>
                             </div>

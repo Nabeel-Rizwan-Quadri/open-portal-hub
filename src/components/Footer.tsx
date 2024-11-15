@@ -4,14 +4,16 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
 
-  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 768);
+  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 769);
+  const [isScreenMedium, setIsScreenMedium] = useState(window.innerWidth < 1160);
 
   useEffect(() => {
     // Define a handler to check the window width
     const handleResize = () => {
-      setIsScreenSmall(window.innerWidth < 768);
+      setIsScreenSmall(window.innerWidth < 769);
+      setIsScreenMedium(window.innerWidth < 1160);
     };
-
+    console.log(window.innerWidth)
     // Add the resize event listener
     window.addEventListener("resize", handleResize);
 
@@ -29,7 +31,7 @@ const CallToAction = () => {
           <div className="flex justify-center">
             <img src={logo} width={120} />
           </div>
-          <div className={isScreenSmall ? "grid grid-cols-2 mt-4 space-y-2 text-center" : "flex flex-row lg:space-x-10 md:space-x-2"}>
+          <div className={isScreenSmall ? "grid grid-cols-2 mt-4 space-y-2 text-center items-center" : (isScreenMedium ? "grid md:grid-cols-4 lg:grid-cols-8 md:space-y-2 text-center items-center" : "flex flex-row lg:space-x-10 md:space-x-2")}>
             <Link to="/" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Home
             </Link>
@@ -41,6 +43,9 @@ const CallToAction = () => {
             </Link>
             <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Pricings
+            </Link>
+            <Link to="/partners" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
+              Partners
             </Link>
             <Link to="/telemetry" className="text-gray-300 hover:text-white transition-colors underline-offset-4 hover:underline">
               Telemetry

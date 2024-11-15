@@ -8,19 +8,34 @@ const UseCases = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements = document.querySelectorAll(".scroll-fade-in");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <section className="py-20 px-4 gradient-bg">
       <div className="container mx-auto">
-        <div className="animate-fade-in">
+        <div className="scroll-fade-in">
           <h2 className="text-4xl font-bold text-center mt-10 mb-6">Case Studies</h2>
           <p className="text-gray-400 text-center mb-12">
             Explore some of the ways our customers leverage our platform.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-4 animate-fade-in order-1 md:order-1">
+          <div className="space-y-4 scroll-fade-in order-1 md:order-1">
             <h2 className="text-3xl font-bold text-customGreen mb-4">Transforming Tax Compliance</h2>
 
             <p className="text-gray-400 text-justify">
@@ -51,7 +66,7 @@ const UseCases = () => {
               ))}
             </div> */}
           </div>
-          <div className="animate-fade-in order-2 md:order-2">
+          <div className="scroll-fade-in order-2 md:order-2">
             <div className="p-6 md:py-32 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50 hover:scale-110  duration-300" >
               {/* <TrendingUp className="w-full h-48 text-customGreen mb-4" /> */}
               {/* <Icon icon="tdesign:upscale" className="w-full h-48 text-customGreen mb-4" /> */}
@@ -69,7 +84,7 @@ const UseCases = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-4 animate-fade-in order-1 md:order-2">
+          <div className="space-y-4 scroll-fade-in order-1 md:order-2">
             <h2 className="text-3xl font-bold text-customGreen mb-4">Accelerating AI Integration</h2>
 
             <p className="text-gray-400 text-justify">
@@ -100,7 +115,7 @@ const UseCases = () => {
               ))}
             </div> */}
           </div>
-          <div className="animate-fade-in order-2 md:order-1">
+          <div className="scroll-fade-in order-2 md:order-1">
             <div className="p-6 md:py-32 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50 hover:scale-110  duration-300" >
               {/* <TrendingUp className="w-full h-48 text-customGreen mb-4" /> */}
               {/* <Icon icon="tdesign:upscale" className="w-full h-48 text-customGreen mb-4" /> */}
@@ -118,12 +133,12 @@ const UseCases = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-          <div className="space-y-4 animate-fade-in order-1 md:order-1">
+          <div className="space-y-4 scroll-fade-in order-1 md:order-1">
             <h2 className="text-3xl font-bold text-customGreen mb-4">Generative AI Government Projects</h2>
 
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Challenge: {" "}</span>
-              Alphatrods faced the complex task of incorporating Generative AI into a government project, all while adhering to stringent GDPR regulations. The project required a comprehensive automation solution that included humans in the loop to maintain oversight and control.
+              Alphatrods faced the complex task of incorporating Generative AI into a government project, all while adhering to stringent GDPR regulations. The project requires a comprehensive automation solution that included humans in the loop to maintain oversight and control.
             </p>
             {/* <h2 className="text-xl font-bold ">The Solution:</h2> */}
             <p className="text-gray-400 text-justify">
@@ -133,7 +148,7 @@ const UseCases = () => {
             {/* <h2 className="text-xl font-bold ">The Impact:</h2> */}
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Impact: {" "}</span>
-              With OpenIAP, Alphatrods transformed a previously fragmented and slow municipal process into a streamlined and controlled operation. The integration of AI and human oversight into a single view simplified management and enhanced the project’s efficiency, demonstrating the power of OpenIAP’s comprehensive automation platform.
+              With OpenIAP, Alphatrods transforms previously fragmented and slow processes in Danish municipalities into streamlined and controlled operations. The integration of AI and human oversight into a single view simplified management and enhanced the project’s efficiency, demonstrating the power of OpenIAP’s comprehensive automation platform.
             </p>
             {/* <div className="grid grid-cols-2 gap-4">
               {[
@@ -149,7 +164,7 @@ const UseCases = () => {
               ))}
             </div> */}
           </div>
-          <div className="animate-fade-in order-2 md:order-2">
+          <div className="scroll-fade-in order-2 md:order-2">
             <div className="p-6 md:py-32 rounded-lg border border-gray-800 hover:border-customGreen transition-all bg-gray-900/50 hover:scale-110  duration-300">
               {/* <TrendingUp className="w-full h-48 text-customGreen mb-4" /> */}
               {/* <Icon icon="tdesign:upscale" className="w-full h-48 text-customGreen mb-4" /> */}
@@ -166,7 +181,7 @@ const UseCases = () => {
           </div>
         </div>
 
-        <p className="text-xl text-center animate-fade-in">
+        <p className="text-xl text-center scroll-fade-in">
           Share Your Path to Success with Us!
         </p>
 

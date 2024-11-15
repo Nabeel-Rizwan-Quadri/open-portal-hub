@@ -79,7 +79,7 @@ const Features = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 scroll-fade-in">
+        <div className="text-center mt-12 scroll-fade-in">
           <Button size="lg" className="hover-lift" onClick={() => navigate("/solutions")}>
             Learn More
           </Button>

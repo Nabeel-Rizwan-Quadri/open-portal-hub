@@ -75,25 +75,25 @@ const Terms = () => {
                         <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
                                 Community assistance for unpaid support or issues at
-                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
                                     {" "}discourse
                                 </span>.
                             </li>
                             <li className="mb-2">
-                                Paid support for training, installation, and troubleshooting via
+                                We have paid support for available for training, installation, and troubleshooting via
                                 <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => navigate("/partners")}>
                                     {" "}partners
                                 </span>.
                             </li>
                             <li className="mb-2">
                                 Reporting of issues and bugs at
-                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
                                     {" "}discourse
                                 </span>.
                             </li>
                             <li className="mb-2">
-                                Security issues reporting at discourse
-                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
+                                Security issues reporting at
+                                <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://discourse.openiap.io/', '_blank', 'noopener,noreferrer')}>
                                     {" "}discourse{" "}
                                 </span>or via email at info@openiap.io.
                             </li>
@@ -135,7 +135,7 @@ const Terms = () => {
                         </div>
                         <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
-                                Premium licenses are available for on-premise or cloud use.
+                                Premium licenses are available for on-premise or cloud use
                                 <span className="text-customGreen cursor-pointer hover:text-white" onClick={() => window.open('https://app.openiap.io/ui/#/Customer', '_blank', 'noopener,noreferrer')}>
                                     {" "}app.openiap.io
                                 </span>.

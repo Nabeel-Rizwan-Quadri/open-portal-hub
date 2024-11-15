@@ -30,7 +30,7 @@ const Testimonials = () => {
             <h3 className="text-test1LogoBlue text-xl place-self-start mt-6 font-bold"> - Head of ITS & HCM</h3>
           </div>
         </div>
-        <Button size="lg" className="hover-lift my-10" onClick={() => navigate("/usecases")}>
+        <Button size="lg" className="hover-lift my-12" onClick={() => navigate("/usecases")}>
           Explore Use Cases
         </Button>
         <p className="text-xl text-gray-400 text-center max-w-5xl mx-auto animate-fade-in">

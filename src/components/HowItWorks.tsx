@@ -4,18 +4,18 @@ import { useEffect } from "react";
 const steps = [
   {
     number: "Step #1",
-    title: "Design Your Workflow",
-    description: "Start with software robots or use our orchestrator to manage multiple workflows"
+    title: "Automate Using Robots",
+    description: "Start automating your UI with OpenRPA or begin orchestrating your existing software robots with OpenCore."
   },
   {
     number: "Step #2",
-    title: "Configure Integration",
-    description: "Automate using your own UI or connect to your existing tools using our API library"
+    title: "Automate Using APIs",
+    description: "Expand or migrate your robots to automation using APIs with low-code solutions or deploy real code using one of our 7 SDKs."
   },
   {
     number: "Step #3",
     title: "Scale & Monitor",
-    description: "Maintain control as you scale with our performance monitoring tools"
+    description: "Stay on top of every detail in your automation as you scale up using our reporting and monitoring tools."
   }
 ];
 
@@ -41,7 +41,7 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-20 px-4 gradient-bg">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 scroll-fade-in">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 scroll-fade-in">
           How It Works
         </h2>
 
@@ -64,7 +64,7 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 scroll-fade-in">
+        <div className="text-center mt-12 scroll-fade-in">
           <Button size="lg" className="hover-lift" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>
             Start Building Now
           </Button>

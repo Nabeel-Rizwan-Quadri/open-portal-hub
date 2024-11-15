@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Backgound from "../images/backgound.png";
@@ -9,6 +9,9 @@ import { Icon } from '@iconify/react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [])
   return (
     <header className="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -66,9 +69,9 @@ const Header = () => {
             <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors">
               Solutions
             </Link>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
               Pricing
-            </a>
+            </Link>
             <span className="text-gray-300 hover:text-white transition-colors cursor-pointer" onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
               Docs
             </span>

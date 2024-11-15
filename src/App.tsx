@@ -38,6 +38,8 @@ const App = () => (
 
             <Route path="/usecases" element={<UseCases />} />
 
+            <Route path="*" element={<Index />} />
+
           </Route>
         </Routes>
       </BrowserRouter>

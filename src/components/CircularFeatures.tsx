@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 const features = [
   { icon: <UsersRound className="h-6 w-6 text-customGreen" />, text: "Agents", subText: "Use Agents to run your code anywhere with easy redeployment" },
-  { icon: <RefreshCcw className="h-6 w-6 text-customGreen" />, text: "Work Items", subText: "Use Work Items to perform back-to-back tasks" },
+  { icon: <RefreshCcw className="h-6 w-6 text-customGreen" />, text: "Work Items", subText: "Use Workitems to track consecutive tasks" },
   { icon: <LockKeyhole className="h-6 w-6 text-customGreen" />, text: "Access Control", subText: "All Data and Agents are protected with granular Access Control lists of your choice" },
   { icon: <Bot className="h-6 w-6 text-customGreen" />, text: "AI Chatbot", subText: "'Talk' to your Agents and Data with ChatGPT or using local LLMs" },
-  { icon: <Unplug className="h-6 w-6 text-customGreen" />, text: "API Integration", subText: "APIs available in NodeRED and seven major programing languages" },
+  { icon: <Unplug className="h-6 w-6 text-customGreen" />, text: "API Integration", subText: "Automate using APIs with NodeRED or in seven major programing languages" },
   { icon: <Code className="h-6 w-6 text-customGreen" />, text: "Low-Code Functions", subText: "Leverage our Low-Code Functions to focus more on bussiness logic" },
   { icon: <FileStack className="h-6 w-6 text-customGreen" />, text: "Version Control", subText: "Keep track of the changes in your Data with stringent Version Control" },
   { icon: <ChartLine className="h-6 w-6 text-customGreen" />, text: "Data Visualization", subText: "Use Grafana to easily visualize your Data in customizable graphs" },
