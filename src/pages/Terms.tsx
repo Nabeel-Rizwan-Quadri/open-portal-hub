@@ -131,7 +131,7 @@ const Terms = () => {
 
                     <div className="my-10">
                         <div className="text-customGreen mb-4 text-xl">
-                            OpenIAP Flow License Subscription
+                            OpenIAP Flow/OpenCore License Subscription
                         </div>
                         <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
@@ -180,16 +180,16 @@ const Terms = () => {
                         </div>
                         <ul className="list-disc list-inside text-gray-400 mb-4 ms-4">
                             <li className="mb-2">
-                                Installation and troubleshooting of OpenIAP Flow on Kubernetes.
+                                Installation and troubleshooting of OpenIAP Flow/OpenCore on Kubernetes.
                             </li>
                             <li className="mb-2">
-                                Installation and troubleshooting of OpenIAP Flow on Docker.
+                                Installation and troubleshooting of OpenIAP Flow/OpenCore on Docker.
                             </li>
                             <li className="mb-2">
-                                Priority attention for bug fixes in OpenIAP Flow and OpenRPA.
+                                Priority attention for bug fixes in OpenIAP Flow/OpenCore and OpenRPA.
                             </li>
                             <li className="mb-2">
-                                Development of new features and expansion of existing features in OpenIAP Flow.
+                                Development of new features and expansion of existing features in OpenIAP Flow/OpenCore.
                             </li>
                             <li className="mb-2">
                                 Architectural and solution-based consulting for developers.

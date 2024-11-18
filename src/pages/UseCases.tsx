@@ -45,12 +45,12 @@ const UseCases = () => {
             {/* <h2 className="text-xl font-bold ">The Solution:</h2> */}
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Solution: {" "}</span>
-              By utilizing the OpenIAP platform, Kuehne + Nagel’s business and development teams collaborated to create a scalable template for rapid deployment. This innovative solution enabled them to efficiently manage tax compliance across six countries and counting. The flexibility of OpenIAP’s low-code and real-code environment facilitated seamless integration with existing systems, empowering teams to adapt quickly to regulatory changes.
+              By utilizing the OpenIAP platform, Kuehne + Nagel’s business and development teams collaborate to create a scalable template for rapid deployment. This innovative solution enables them to efficiently manage tax compliance across six countries and counting. The flexibility of OpenIAP’s low-code and real-code environment facilitates seamless integration with existing systems, empowering teams to adapt quickly to regulatory changes.
             </p>
             {/* <h2 className="text-xl font-bold ">The Impact:</h2> */}
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Impact: {" "}</span>
-              With OpenIAP, Kuehne + Nagel saves a significant amount of time and resources each month, by implementing a robust system for data verification that is secure and scalable. The streamlined process significantly boosted productivity and operational efficiency.
+              With OpenIAP, Kuehne + Nagel saves a significant amount of time and resources each month by implementing a robust system for data verification that is secure and scalable. The streamlined process significantly boosts productivity and operational efficiency.
             </p>
             {/* <div className="grid grid-cols-2 gap-4">
               {[
@@ -89,7 +89,7 @@ const UseCases = () => {
 
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Challenge: {" "}</span>
-              B2BPreSales required a solution to connect disparate data sources to leverage AI and large language models (LLMs). They needed a flexible platform that could easily integrate with multiple CRM providers, despite having no existing infrastructure in place.
+              Leveraging OpenIAP’s OpenCore and Node-RED, B2BPreSales developed a proof of concept (POC) with a custom web front end. This approach enabled rapid development and integration without the need for a pre-existing infrastructure. OpenCore’s robust capabilities allowed the team to quickly connect data sources and implement AI-driven solutions.
             </p>
             {/* <h2 className="text-xl font-bold ">The Solution:</h2> */}
             <p className="text-gray-400 text-justify">
@@ -138,17 +138,17 @@ const UseCases = () => {
 
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Challenge: {" "}</span>
-              Alphatrods faced the complex task of incorporating Generative AI into a government project, all while adhering to stringent GDPR regulations. The project requires a comprehensive automation solution that included humans in the loop to maintain oversight and control.
+              Alphatrods faced the complex task of incorporating Generative AI into government projects with 22 different municipalities, while adhering to stringent GDPR regulations. The project required a comprehensive automation solution that includes humans in the loop to maintain oversight and control.
             </p>
             {/* <h2 className="text-xl font-bold ">The Solution:</h2> */}
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Solution: {" "}</span>
-              Utilizing OpenCore, Alphatrods achieved a unified, single-pane view of the entire automation process. This solution seamlessly integrated multiple RPA products while keeping humans in the loop. OpenCore’s capabilities ensured that all components worked together harmoniously, maintaining compliance and efficiency.
+              Utilizing OpenCore, Alphatrods achieved a unified, single-pane view of the entire automation process. This solution seamlessly integrated multiple RPA products while keeping humans in the loop. OpenCore’s capabilities ensured that all components work together harmoniously, maintaining compliance and efficiency.
             </p>
             {/* <h2 className="text-xl font-bold ">The Impact:</h2> */}
             <p className="text-gray-400 text-justify">
               <span className="font-bold text-white">The Impact: {" "}</span>
-              With OpenIAP, Alphatrods transforms previously fragmented and slow processes in Danish municipalities into streamlined and controlled operations. The integration of AI and human oversight into a single view simplified management and enhanced the project’s efficiency, demonstrating the power of OpenIAP’s comprehensive automation platform.
+              With OpenIAP, Alphatrods transforms previously fragmented and slow processes in Danish municipalities into streamlined and controlled operations. The integration of AI and human oversight into a single view simplifies management and enhances the project’s efficiency, demonstrating the power of OpenIAP’s comprehensive automation platform. 
             </p>
             {/* <div className="grid grid-cols-2 gap-4">
               {[
