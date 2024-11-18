@@ -36,7 +36,7 @@ const CallToAction = () => {
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button variant="default" size="lg" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
-              Schedule a Meeitng
+              Schedule a Meeting
             </Button>
           </div>
         </div>

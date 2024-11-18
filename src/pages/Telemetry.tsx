@@ -20,7 +20,7 @@ const Telemetry = () => {
                         WHY IS TELEMETRY COLLECTED?
                     </div>
                     <div className="text-gray-400 mb-10">
-                        In order to document usage patterns of the different applications to help decide what features to focus on and how they are used, usage information from OpenIAP applications gets collected and sent to otel.openiap.io. Each instance generate a unique non-reversable ofid based on the domain name, to allocate each client to the instance it belongs.
+                        In order to document usage patterns of the different applications to help decide what features to focus on and how they are used, usage information from OpenIAP applications gets collected and sent to otel.openiap.io. Each instance generates a unique non-reversable ofid based on the domain name, to allocate each client to the instance it belongs.
                     </div>
                     <div className="text-customGreen mb-4 text-xl">
                         WHY IS TELEMETRY COLLECTED?
@@ -29,7 +29,7 @@ const Telemetry = () => {
                         For OpenRPA we collect ofid, memory and CPU usage, hostname, username, number of workflow runs, number of active running workflows, and timing information for each activity type.
                     </div>
                     <div className="text-gray-400 mb-10">
-                        For OpenCore we collect ofid, memory and CPU usage, database performance, online clients and client types, queue usage and number and type of packages and timing of each package.
+                        For OpenCore we collect ofid, memory and CPU usage, database performance, online clients and client types, queue usage and number and types of packages and timing of each package.
                     </div>
                     <div className="text-gray-400 mb-10">
                         For OpenIAP Agent instances we collect memory and CPU usage, and timing information for each node type.

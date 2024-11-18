@@ -38,7 +38,7 @@ const PricingSection = () => {
         </p>
 
         <div className="flex space-x-4 justify-center items-center mb-8 animate-fade-in">
-          <div className={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 1 && "bg-customGreen text-black"} `} onClick={() => setScreen(1)}>Licences</div>
+          <div className={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 1 && "bg-customGreen text-black"} `} onClick={() => setScreen(1)}>Licenses</div>
           <div className={`p-2 rounded cursor-pointer hover:bg-customGreen hover:text-black ${screen === 2 && "bg-customGreen text-black"} `} onClick={() => setScreen(2)}>Cloud</div>
           <div className={`p-2 rounded cursor-pointer  hover:bg-customGreen hover:text-black ${screen === 3 && "bg-customGreen text-black"} `} onClick={() => setScreen(3)}>Consulting</div>
         </div>
@@ -177,7 +177,7 @@ const PricingSection = () => {
               {/* Free plan */}
               <Card className=" hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
-                  <CardTitle>Free</CardTitle>
+                  <CardTitle>Open Source</CardTitle>
                   <CardDescription>Perfect for getting started</CardDescription>
                 </CardHeader>
 
@@ -194,7 +194,7 @@ const PricingSection = () => {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Limited disk space (25 MBs)
+                      Limited disk space (25 MB)
                     </li>
                     <li className="flex items-center">
                       <X className="mr-2 h-4 w-4 text-red-500" />
@@ -338,7 +338,7 @@ const PricingSection = () => {
               <Card className="md:col-start-2 md:col-span-3 lg:md:col-span-1 lg:col-start-2 hover:scale-105 transition-all duration-300 hover:shadow-lg flex flex-col justify-between">
                 <CardHeader>
                   <CardTitle>Hourly</CardTitle>
-                  <CardDescription>Perfect for onbording developers</CardDescription>
+                  <CardDescription>Perfect for onboarding developers</CardDescription>
                 </CardHeader>
 
                 <div className="flex p-4 items-end">
@@ -358,7 +358,7 @@ const PricingSection = () => {
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Designing software architechture
+                      Designing software architecture
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
