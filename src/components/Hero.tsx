@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="flex justify-center mt-10 space-x-4 relative items-center">
           <div className={iconClass} onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/videos', '_blank', 'noopener,noreferrer')}>
             <Icon icon="mdi:youtube" width={30} height={30} />
-            <p>Youtube</p>
+            <p>YouTube</p>
           </div>
           <div className={iconClass} onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>
             <Icon icon="icomoon-free:books" width={30} height={30} />
@@ -52,7 +52,7 @@ const Hero = () => {
           </div>
           <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/', '_blank', 'noopener,noreferrer')}>
             <Icon icon="ri:github-fill" width={30} height={30} />
-            <p>Github</p>
+            <p>GitHub</p>
           </div>
         </div>
 

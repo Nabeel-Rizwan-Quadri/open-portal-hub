@@ -12,7 +12,7 @@ const features = [
   {
     icon: <Building className="h-12 w-12 text-customGreen" />,
     title: "On-Premise",
-    description: "Deploy on-premise and off the grid for maximum data privacy"
+    description: "Deploy on-premise and off the grid for maximum data privacy with our SDKs and NodeRED’s API library"
   },
   {
     icon: <Lock className="h-12 w-12 text-customGreen" />,

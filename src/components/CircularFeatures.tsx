@@ -63,9 +63,8 @@ const CircularFeatures = () => {
                           {feature.text}
                         </p>
                       </div>
-                      <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
+                      <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-white transition-all z-10 card-back">
                         {feature.subText}
-
                       </div>
                     </div>
                   </div>
@@ -106,7 +105,7 @@ const CircularFeatures = () => {
                         {feature.text}
                       </p>
                     </div>
-                    <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-gray-400 transition-all z-10 card-back">
+                    <div className="p-2 duration-100 delay-200 text-sm absolute inset-0 w-full h-full flex justify-center items-center bg-gray-900 text-white transition-all z-10 card-back ">
                       {feature.subText}
 
                     </div>

@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import Logo from "../images/logo.png";
 import Backgound from "../images/backgound.png";
 import { Icon } from '@iconify/react';
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    setIsMenuOpen(false)
-  }, [])
   return (
     <header className="fixed w-full top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-gray-800">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -43,7 +42,7 @@ const Header = () => {
           </nav>
           <div className="ms-4 flex space-x-2 items-center align-middle">
             <Icon icon="ri:github-fill" width={30} className="cursor-pointer" onClick={() => window.open('https://github.com/open-rpa/', '_blank', 'noopener,noreferrer')} />
-            <Button variant="secondary" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
+            <Button variant="secondary" className="hover-lift" onClick={() => navigate("/contact")}>
               Get In Touch
             </Button>
             <Button variant="default" className="hover-lift" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>
@@ -61,15 +60,15 @@ const Header = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden absolute w-full bg-background border-b border-gray-800">
+        <div className="md:hidden absolute w-full bg-background border-b border-gray-800 animate-fade-in">
           <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
-            <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/solutions" className="text-gray-300 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
               Solutions
             </Link>
-            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
               Pricing
             </Link>
             <span className="text-gray-300 hover:text-white transition-colors cursor-pointer" onClick={() => window.open('https://docs.openiap.io/', '_blank', 'noopener,noreferrer')}>

@@ -182,7 +182,7 @@ const PricingSection = () => {
                 </CardHeader>
 
                 <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">0 USD</span>
+                  <span className="text-3xl font-bold text-center">0 <span className="text-2xl">USD</span></span>
                   {/* <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span> */}
                 </div>
 
@@ -190,7 +190,7 @@ const PricingSection = () => {
                   <ul className="space-y-4">
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
-                      Run time limited to 4 hours
+                      Runtime limited to 4 hours
                     </li>
                     <li className="flex items-center">
                       <Check className="mr-2 h-4 w-4 text-green-500" />
@@ -224,8 +224,8 @@ const PricingSection = () => {
                   <CardDescription>Perfect for Beginners and Small Projects</CardDescription>
                 </CardHeader>
                 <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">39 USD</span>
-                  <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span>
+                  <span className="text-3xl font-bold text-center">39 <span className="text-2xl">USD</span></span>
+                  <span className="text-sm  font-bold text-center justify-end text-gray-400">/Month</span>
                 </div>
                 <CardContent>
                   <ul className="space-y-4">
@@ -253,8 +253,8 @@ const PricingSection = () => {
                   <CardDescription>For great value over performance</CardDescription>
                 </CardHeader>
                 <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">129 USD</span>
-                  <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span>
+                  <span className="text-3xl font-bold text-center">129 <span className="text-2xl">USD</span></span>
+                  <span className="text-sm font-bold text-center justify-end text-gray-400">/Month</span>
                 </div>
 
                 <CardContent>
@@ -307,8 +307,8 @@ const PricingSection = () => {
                   <CardDescription>Ample resources for advanced projects</CardDescription>
                 </CardHeader>
                 <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">239 USD</span>
-                  <span className="text-md font-bold text-center justify-end text-gray-600">/Month</span>
+                  <span className="text-3xl font-bold text-center">239 <span className="text-2xl">USD</span></span>
+                  <span className="text-sm font-bold text-center justify-end text-gray-400">/Month</span>
                 </div>
                 <CardContent>
                   <ul className="space-y-4">
@@ -342,8 +342,8 @@ const PricingSection = () => {
                 </CardHeader>
 
                 <div className="flex p-4 items-end">
-                  <span className="text-3xl font-bold text-center">$216</span>
-                  <span className="text-md font-bold text-center justify-end text-gray-600">/hour</span>
+                  <span className="text-3xl font-bold text-center">216 <span className="text-2xl">USD</span></span>
+                  <span className="text-md font-bold text-center justify-end text-gray-400">/hour</span>
                 </div>
 
                 <CardContent>

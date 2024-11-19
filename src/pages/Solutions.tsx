@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ArrowRight, Box, Workflow, Code, Zap, GitMerge, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, TrendingUp, MonitorCog, Play } from "lucide-react";
+import { ArrowRight, Box, Workflow, Code, Zap, GitMerge, Lock, LockKeyhole, ShipWheel, Users, Database, LineChart, ChartColumn, TrendingUp, MonitorCog, Play, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Opencore from "../images/opencore.png"
 import Apidocs from "../images/solutions/apidocs.png"
@@ -82,7 +82,7 @@ const Solutions = () => {
               <div className="flex justify-center mt-10 space-x-4">
                 <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openflow/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="ri:github-fill" width={30} height={30} />
-                  <p>Github</p>
+                  <p>GitHub</p>
                 </div>
                 <div className={iconClass} onClick={() => window.open('https://docs.openiap.io/docs/flow/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="icomoon-free:books" width={30} height={30} />
@@ -232,7 +232,7 @@ const Solutions = () => {
                   title: "API Documentation",
                   description: "Comprehensive API documentation with interactive examples and SDKs for seven major programming languages.",
                   image: Apidocs,
-                  redirectTo: "https://docs.openiap.io/"
+                  redirectTo: "https://docs.openiap.io/docs/sdk/"
                 },
               ].map((item, index) => (
                 <div
@@ -313,7 +313,7 @@ const Solutions = () => {
               <div className="flex justify-center mt-10 space-x-4">
                 <div className={iconClass} onClick={() => window.open('https://github.com/open-rpa/openrpa/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="ri:github-fill" width={30} height={30} />
-                  <p>Github</p>
+                  <p>GitHub</p>
                 </div>
                 <div className={iconClass} onClick={() => window.open('https://docs.openiap.io/docs/openrpa/', '_blank', 'noopener,noreferrer')}>
                   <Icon icon="icomoon-free:books" width={30} height={30} />
@@ -332,6 +332,10 @@ const Solutions = () => {
                 <Button className="mt-6 w-full" size="lg" variant="outline" onClick={() => window.open('https://www.youtube.com/@AllanZimmermann/videos', '_blank', 'noopener,noreferrer')}>
                   Watch Tutorial
                   <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+                <Button className="mt-4 w-full" size="lg" variant="default" onClick={() => window.open('https://github.com/open-rpa/openrpa/releases/latest/download/OpenRPA.msi', '_blank', 'noopener,noreferrer')}>
+                  Download OpenRPA
+                  <ArrowDown className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>

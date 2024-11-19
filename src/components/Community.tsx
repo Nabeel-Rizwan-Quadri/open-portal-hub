@@ -44,7 +44,7 @@ const Community = () => {
             <a target="_blank" rel="noopener noreferrer"
               className="flex flex-col items-center space-y-4">
               <Youtube className="w-12 h-12 transition-all duration-300 hover:scale-110" />
-              <h3 className="text-xl font-semibold">Youtube</h3>
+              <h3 className="text-xl font-semibold">YouTube</h3>
               <h3 className="text-2xl">+500 Videos</h3>
               <p className="text-gray-400 text-center">By us and other content creators</p>
               <p className="text-gray-400 text-center"></p>
