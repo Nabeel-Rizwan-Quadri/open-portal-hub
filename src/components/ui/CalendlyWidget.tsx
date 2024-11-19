@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const CalendlyWidget = () => {
 
@@ -15,9 +15,9 @@ const CalendlyWidget = () => {
     };
   }, []);
 
-  return (  
+  return (
     <div
-      className="calendly-inline-widget gradient-bg"
+      className="calendly-inline-widget gradient-bg absolute"
       data-url="https://calendly.com/simon-openiap/30min?theme=dark"
       style={{ minWidth: 320, height: 700 }}
     ></div>

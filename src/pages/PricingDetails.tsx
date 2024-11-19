@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CalendarFold } from "lucide-react";
 import { useEffect, useState } from "react";
 import {
-    //  useNavigate,
+    useNavigate,
     useParams
 } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const tabClass1 = "cursor-pointer inline-block p-2 text-sm border-b-2 rounded-t-
 
 const Privacy = () => {
     const params = useParams()
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
     const [active, setActive] = useState("")
 
     useEffect(() => {
@@ -110,7 +110,7 @@ const Privacy = () => {
                                 <Button variant="secondary" className="hover-lift" size="lg" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')} >
                                     Get Started <ArrowRight className="ml-2 h-5 w-5" />
                                 </Button>
-                                <Button className="hover-lift" size="lg" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')} >
+                                <Button className="hover-lift" size="lg" onClick={() => navigate("/contact/meet")} >
                                     Schedule a Meeting <CalendarFold className="ml-2 h-5 w-5" />
                                 </Button>
                             </div>

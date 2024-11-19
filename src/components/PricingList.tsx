@@ -167,7 +167,7 @@ const PricingSection = () => {
                     </div>
                   </CardContent>
                 </CardHeader>
-                <Button onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')} className="m-6 mt-0">Contact Sales</Button>
+                <Button onClick={() => navigate("/contact/meet")} className="m-6 mt-0">Contact Sales</Button>
               </Card>
             </div>
           }

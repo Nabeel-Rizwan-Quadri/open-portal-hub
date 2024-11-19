@@ -58,7 +58,7 @@ const ContactUsForm = () => {
                     <p className="text-xl text-gray-400 mb-8  text-center">
                         We will get back to you as soon as we can.
                     </p>
-                    <div className="bg-gray-900 border border-1 rounded-xl p-4 m-2">
+                    <div className="bg-card border border-1 rounded-xl p-4 m-2">
                         <Form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2">
                             <div className={inputDivs}>
                                 <TextInput

@@ -4,11 +4,17 @@ import CalendlyWidget from "@/components/ui/CalendlyWidget";
 import WriteToUs from "@/components/WriteToUs";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 const Contact = () => {
-
+    const params = useParams();
     useEffect(() => {
-        window.scrollTo(0, 0);
+        if (params.id === "meet") {
+            window.scrollTo(0, 1020);
+        }
+        else {
+            window.scrollTo(0, 0);
+        }
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {

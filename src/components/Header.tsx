@@ -42,7 +42,7 @@ const Header = () => {
           </nav>
           <div className="ms-4 flex space-x-2 items-center align-middle">
             <Icon icon="ri:github-fill" width={30} className="cursor-pointer" onClick={() => window.open('https://github.com/open-rpa/', '_blank', 'noopener,noreferrer')} />
-            <Button variant="secondary" className="hover-lift" onClick={() => navigate("/contact")}>
+            <Button variant="secondary" className="hover-lift" onClick={() => navigate("/contact/view")}>
               Get In Touch
             </Button>
             <Button variant="default" className="hover-lift" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>

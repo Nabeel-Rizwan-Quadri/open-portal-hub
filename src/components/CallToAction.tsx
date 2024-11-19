@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CallToAction = () => {
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,7 +39,7 @@ const CallToAction = () => {
             <Button variant="secondary" size="lg" className="hover-lift" onClick={() => window.open('https://docs.openiap.io/docs/Accessing-for-the-First-Time.html', '_blank', 'noopener,noreferrer')}>
               Get Started <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="default" size="lg" className="hover-lift" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
+            <Button variant="default" size="lg" className="hover-lift" onClick={() => navigate("/contact/meet")}>
               Schedule a Meeting
             </Button>
           </div>
