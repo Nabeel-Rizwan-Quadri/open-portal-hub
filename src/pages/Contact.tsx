@@ -1,28 +1,33 @@
 import ContactUsForm from "@/components/ContactUsForm";
 import CalendlyWidget from "@/components/ui/CalendlyWidget";
 import WriteToUs from "@/components/WriteToUs";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 
 const Contact = () => {
     const params = useParams();
+    const sectionRef = useRef(null);
+
+    const handleScroll = () => {
+        const offset = -60; // Adjust this value to match your header height
+        const elementPosition = sectionRef.current.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY + offset;
+    
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+      };
+
     useEffect(() => {
         if (params.id === "meet") {
-            if(window.innerWidth < 450){
-                window.scrollTo(0, 1200);
-            }
-            else if(window.innerWidth > 540 && window.innerWidth < 769){
-                window.scrollTo(0, 1250);
-            }
-            else if(window.innerWidth > 769 && window.innerWidth < 1160){
-                window.scrollTo(0, 1600);
-            }
-            else{
-                window.scrollTo(0, 1050);
-            }
+            handleScroll()
         }
         else {
-            window.scrollTo(0, 0);
+            window.scrollTo({
+                top: 0,
+                // behavior: 'smooth',
+            });
         }
         const observer = new IntersectionObserver(
             (entries) => {
@@ -56,7 +61,9 @@ const Contact = () => {
             </div> */}
             <ContactUsForm />
             <WriteToUs />
-            <CalendlyWidget />
+            <div ref={sectionRef}>
+                <CalendlyWidget />
+            </div>
         </>
     );
 };
