@@ -50,7 +50,7 @@ const ContactUsForm = () => {
 
     return (
         <section className="py-20 px-4 md:h-screen flex items-center justify-center gradient-bg ">
-            <div className="container mx-auto">
+            <div className="md:container mx-auto">
                 <div className="max-w-3xl mx-auto animate-fade-in">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
                         Get in Touch!

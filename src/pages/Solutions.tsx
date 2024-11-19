@@ -188,8 +188,8 @@ const Solutions = () => {
                   { icon: <Code />, text: "Multi-Language Support" },
                   { icon: <GitMerge />, text: "Git" }
                 ].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-4 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
-                    {feature.icon}
+                  <div key={index} className="flex items-center justify-center md:justify-start space-x-3 p-4 rounded-lg border border-gray-700 hover:border-customGreen transition-all">
+                    <span>{feature.icon}</span>
                     <span className="text-sm md:text-base">{feature.text}</span>
                   </div>
                 ))}

@@ -75,7 +75,10 @@ const Header = () => {
               Docs
             </span>
             <Icon icon="ri:github-fill" width={30} />
-            <Button variant="secondary" className="w-full" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')}>
+            <Button variant="secondary" className="w-full" onClick={() => {
+              navigate("/contact/view")
+              setIsMenuOpen(false)
+            }}>
               Get In Touch
             </Button>
             <Button variant="default" className="w-full" onClick={() => window.open('https://app.openiap.io/', '_blank', 'noopener,noreferrer')}>

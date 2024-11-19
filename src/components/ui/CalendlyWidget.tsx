@@ -1,6 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const CalendlyWidget = () => {
+
+  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 450);
+  const [isScreenSmallTab, setIsScreenSmallTab] = useState(window.innerWidth < 769 && window.innerWidth > 540);
+  const [isScreenMedium, setIsScreenMedium] = useState(window.innerWidth < 1160 && window.innerWidth > 769);
+  const [isScreenLarge, setIsScreenLarge] = useState(window.innerWidth > 1160);
+  console.log("isScreenSmall ", isScreenSmall)
+  console.log("isScreenSmallTab ", isScreenSmallTab)
+  console.log("isScreenMedium ", isScreenMedium)
+  console.log("isScreenLarge ", isScreenLarge)
+
+  useEffect(() => {
+    // Define a handler to check the window width
+    const handleResize = () => {
+      setIsScreenSmall(window.innerWidth < 540);
+      setIsScreenSmallTab(window.innerWidth > 540 && window.innerWidth < 769);
+      setIsScreenMedium(window.innerWidth > 769 && window.innerWidth < 1160);
+      setIsScreenLarge(window.innerWidth > 1160);
+    };
+    console.log(window.innerWidth)
+    // Add the resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call the handler initially in case the screen is already small
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     // Dynamically load Calendly script
@@ -16,11 +44,21 @@ const CalendlyWidget = () => {
   }, []);
 
   return (
-    <div
-      className="calendly-inline-widget gradient-bg absolute"
-      data-url="https://calendly.com/simon-openiap/30min?theme=dark"
-      style={{ minWidth: 320, height: 700 }}
-    ></div>
+    <>
+      <section className="py-20 px-4 gradient-bg">
+        <div className="md:container mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 ">
+            Or Book a Meeting Now 
+          </h2>
+          <div
+            // className="calendly-inline-widget "
+            className={`calendly-inline-widget min-w-80 ${isScreenSmall && "h-[66rem]"} ${isScreenSmallTab && "h-[70rem]"} ${isScreenMedium && "h-[70rem]"}  ${isScreenLarge && "h-[50rem]"} `}
+            data-url="https://calendly.com/simon-openiap/30min?theme=dark"
+            // style={{ minWidth: 320, height: 700 }}
+          ></div>
+        </div>
+      </section >
+    </>
   );
 };
 
