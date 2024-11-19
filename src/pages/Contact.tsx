@@ -10,7 +10,18 @@ const Contact = () => {
     const params = useParams();
     useEffect(() => {
         if (params.id === "meet") {
-            window.scrollTo(0, 1020);
+            if(window.innerWidth < 450){
+                window.scrollTo(0, 1200);
+            }
+            else if(window.innerWidth > 540 && window.innerWidth < 769){
+                window.scrollTo(0, 1250);
+            }
+            else if(window.innerWidth > 769 && window.innerWidth < 1160){
+                window.scrollTo(0, 1600);
+            }
+            else{
+                window.scrollTo(0, 1050);
+            }
         }
         else {
             window.scrollTo(0, 0);

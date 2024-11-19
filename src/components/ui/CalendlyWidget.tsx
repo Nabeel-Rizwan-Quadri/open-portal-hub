@@ -47,8 +47,8 @@ const CalendlyWidget = () => {
     <>
       <section className="py-20 px-4 gradient-bg">
         <div className="md:container mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 ">
-            Or Book a Meeting Now 
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Book a Meeting Now 
           </h2>
           <div
             // className="calendly-inline-widget "
