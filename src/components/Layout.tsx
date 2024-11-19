@@ -1,16 +1,20 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CallToAction from "@/components/CallToAction";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
+  const location = useLocation()
+  console.log("location", location)
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
       <main className="flex-grow">
         <Outlet />
       </main>
-      <CallToAction />
+      {
+        !location.pathname.includes("contact") && < CallToAction />
+      }
       <Footer />
     </div>
   );
