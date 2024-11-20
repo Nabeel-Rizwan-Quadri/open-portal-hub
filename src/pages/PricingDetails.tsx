@@ -18,7 +18,6 @@ const Privacy = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         const id = params.id
-        console.log(id)
         setActive(id)
     }, []);
 

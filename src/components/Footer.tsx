@@ -8,10 +8,7 @@ const CallToAction = () => {
   const [isScreenSmallTab, setIsScreenSmallTab] = useState(window.innerWidth < 769 && window.innerWidth > 540);
   const [isScreenMedium, setIsScreenMedium] = useState(window.innerWidth < 1160 && window.innerWidth > 769);
   const [isScreenLarge, setIsScreenLarge] = useState(window.innerWidth > 1160);
-  console.log("isScreenSmall ", isScreenSmall)
-  console.log("isScreenSmallTab ", isScreenSmallTab)
-  console.log("isScreenMedium ", isScreenMedium)
-  console.log("isScreenLarge ", isScreenLarge)
+
   useEffect(() => {
     // Define a handler to check the window width
     const handleResize = () => {
@@ -20,7 +17,6 @@ const CallToAction = () => {
       setIsScreenMedium(window.innerWidth > 769 && window.innerWidth < 1160);
       setIsScreenLarge(window.innerWidth > 1160);
     };
-    console.log(window.innerWidth)
     // Add the resize event listener
     window.addEventListener("resize", handleResize);
 
