@@ -5,7 +5,6 @@ import { Outlet, useLocation } from "react-router-dom";
 
 const Layout = () => {
   const location = useLocation()
-  console.log("location", location)
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />

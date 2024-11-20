@@ -14,7 +14,6 @@ const ContactUsForm = () => {
     const handleSubmit = async (data: Object) => {
         setLoading(true)
         try {
-            console.log("Form data: ", data)
             const requestOptions = {
                 method: 'POST',
                 headers: {
@@ -25,7 +24,6 @@ const ContactUsForm = () => {
 
             const response = await fetch("https://allanopenrpadk.app.openiap.io/form", requestOptions)
             const resData = await response.json();
-            console.log("resData: ", resData)
             if (resData.success) {
                 toast.success("Your response has been submitted")
             }
