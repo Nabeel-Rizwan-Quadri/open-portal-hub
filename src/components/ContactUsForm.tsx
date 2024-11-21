@@ -11,8 +11,11 @@ const inputDivs = "mx-2"
 const ContactUsForm = () => {
 
     const [loading, setLoading] = useState(false)
+    const [disabled, setDisabled] = useState(false)
+
     const handleSubmit = async (data: Object) => {
         setLoading(true)
+        setDisabled(true)
         try {
             const requestOptions = {
                 method: 'POST',
@@ -100,7 +103,7 @@ const ContactUsForm = () => {
                                     largeInput={true}
                                 />
                             </div>
-                            <Button className="submit-btn col-span-1 md:col-span-2 my-2" type="submit" disabled={loading}>
+                            <Button className="submit-btn col-span-1 md:col-span-2 my-2" type="submit" disabled={disabled} >
                                 Submit!
                             </Button>
                         </Form>
