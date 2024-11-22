@@ -223,9 +223,12 @@ const PricingSection = () => {
                   <CardTitle>Cloud Basic</CardTitle>
                   <CardDescription>Perfect for Beginners and Small Projects</CardDescription>
                 </CardHeader>
-                <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">39 <span className="text-2xl">USD</span></span>
+                <div className="flex px-6 items-end">
+                  <span className="text-3xl font-bold text-center"><span className="text-2xl">DKK {" "}</span>277</span>
                   <span className="text-sm  font-bold text-center justify-end text-gray-400">/Month</span>
+                </div>
+                <div className="flex px-6 pb-6 items-end">
+                  <span className="text-base font-bold text-center text-gray-400">Approx. 39 <span className="text-base text-gray-400">USD</span></span>
                 </div>
                 <CardContent>
                   <ul className="space-y-4">
@@ -252,11 +255,13 @@ const PricingSection = () => {
                   <CardTitle>Cloud Premium</CardTitle>
                   <CardDescription>For great value over performance</CardDescription>
                 </CardHeader>
-                <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">129 <span className="text-2xl">USD</span></span>
+                <div className="flex px-6 items-end">
+                  <span className="text-3xl font-bold text-center"><span className="text-2xl">DKK {" "}</span>915 </span>
                   <span className="text-sm font-bold text-center justify-end text-gray-400">/Month</span>
                 </div>
-
+                <div className="flex px-6 pb-6 items-end">
+                  <span className="text-base font-bold text-center text-gray-400">Approx. 129 <span className="text-base text-gray-400">USD</span></span>
+                </div>
                 <CardContent>
                   <ul className="space-y-4">
                     <li className="flex items-center">
@@ -306,9 +311,12 @@ const PricingSection = () => {
                   <CardTitle>Cloud Advanced</CardTitle>
                   <CardDescription>Ample resources for advanced projects</CardDescription>
                 </CardHeader>
-                <div className="flex p-6 items-end">
-                  <span className="text-3xl font-bold text-center">239 <span className="text-2xl">USD</span></span>
+                <div className="flex px-6 items-end">
+                  <span className="text-3xl font-bold text-center"><span className="text-2xl">DKK {" "}</span>1699</span>
                   <span className="text-sm font-bold text-center justify-end text-gray-400">/Month</span>
+                </div>
+                <div className="flex px-6 pb-6 items-end">
+                  <span className="text-base font-bold text-center text-gray-400">Approx. 239<span className="text-base text-gray-400"> USD</span></span>
                 </div>
                 <CardContent>
                   <ul className="space-y-4">
@@ -341,11 +349,13 @@ const PricingSection = () => {
                   <CardDescription>Perfect for onboarding developers</CardDescription>
                 </CardHeader>
 
-                <div className="flex p-4 items-end">
-                  <span className="text-3xl font-bold text-center">216 <span className="text-2xl">USD</span></span>
+                <div className="flex px-4 items-end">
+                  <span className="text-3xl font-bold text-center"><span className="text-2xl">DKK {" "}</span>1530</span>
                   <span className="text-md font-bold text-center justify-end text-gray-400">/hour</span>
                 </div>
-
+                <div className="flex px-4 pb-4 items-end">
+                  <span className="text-base font-bold text-center text-gray-400">Approx. 216 <span className="text-base text-gray-400">USD</span></span>
+                </div>
                 <CardContent>
                   <ul className="space-y-2">
                     <li className="flex items-center">

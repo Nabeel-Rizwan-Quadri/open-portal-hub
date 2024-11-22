@@ -50,7 +50,7 @@ const Privacy = () => {
                 </div>
                 <div className="container mx-auto">
                     {
-                        active === "1" && <div className="mt-10">
+                        active === "2" && <div className="mt-10">
                             <div className="text-customGreen mb-4 text-xl">
                                 OpenIAP Cloud only Services
                             </div>
@@ -66,7 +66,7 @@ const Privacy = () => {
                         </div>
                     }
                     {
-                        active === "2" && <div className="mt-10">
+                        active === "1" && <div className="mt-10">
                             <div className="text-customGreen mb-4 text-xl">
                                 Enable enterprise tooling for scaling
 
