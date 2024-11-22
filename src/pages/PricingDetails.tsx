@@ -124,10 +124,10 @@ const Privacy = () => {
                                 You can purchase per hour consulting services from OpenIAP ApS. Hours are limited to the offerings below. If you are looking for a company to build or monitor your flows and installation, please contact one of our partners. Hours are billed in 30-minute increments and must be pre-paid before work begins. You can buy a single ad-hoc hour when booking a meeting with us, or purchase packages of hours on your customer page. Buying packages will offer a discount on the hourly rate.
                             </div>
                             <div className="text-customGreen mb-4 text-xl">
-                                Price: 1500 DKK/hour
+                                Price: 1530 DKK/hour
                             </div>
                             <div className="text-gray-400 mb-10">
-                                (Approx. 216 USD as of November 6, 2023)
+                                (Approx. 216 USD as of November 22, 2024)
                             </div>
                         </div>
                     }
