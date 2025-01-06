@@ -375,7 +375,7 @@ const PricingSection = () => {
                       Assistance with custom infrastructure
                     </li>
                   </ul>
-                  <Button onClick={() => window.open('https://calendly.com/openiap/consulting-session/', '_blank', 'noopener,noreferrer')} className="w-full mt-6">Book a meeting</Button>
+                  <Button onClick={() => window.open('https://calendar.app.google/9Kt9XWGRYPLTyhQF7', '_blank', 'noopener,noreferrer')} className="w-full mt-6">Book a meeting</Button>
                 </CardContent>
               </Card>
             </div>
