@@ -34,7 +34,7 @@ const Partners = () => {
                         Our partners offer support in English, Danish, German, Dutch, Afrikaans, Mandarin, Cantonese and Portuguese, ensuring assistance is available in your preferred language.
                     </div>
                     <div className="flex justify-center">
-                        <Button className="hover-lift" size="lg" onClick={() => window.open('https://calendly.com/simon-openiap/30min', '_blank', 'noopener,noreferrer')} >
+                        <Button className="hover-lift" size="lg" onClick={() => window.open('https://calendar.app.google/aoU5qv1gX6ocHnAH8', '_blank', 'noopener,noreferrer')} >
                             Become a Partner 
                         </Button>
                     </div>
