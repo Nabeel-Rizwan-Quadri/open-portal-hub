@@ -25,33 +25,18 @@ const CalendlyWidget = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  useEffect(() => {
-    // Dynamically load Calendly script
-    const script = document.createElement("script");
-    script.src = "https://assets.calendly.com/assets/external/widget.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    // Clean up script on component unmount
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
       <section className="py-20 px-4 gradient-bg">
         <div className="md:container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold">
-            Book a Meeting Now
+            Book a Meeting Now 
           </h2>
-          <iframe
-            src="https://calendar.app.google/aoU5qv1gX6ocHnAH8"
-            // className="calendly-inline-widget "
-            className={`w-full ${isScreenSmall && "h-[66rem]"} ${isScreenSmallTab && "h-[70rem]"} ${isScreenMedium && "h-[70rem]"}  ${isScreenLarge && "h-[50rem]"} `}
+          <div
+            className={`calendly-inline-widget min-w-80 ${isScreenSmall && "h-[66rem]"} ${isScreenSmallTab && "h-[70rem]"} ${isScreenMedium && "h-[70rem]"}  ${isScreenLarge && "h-[50rem]"} `}
             data-url="https://calendar.app.google/aoU5qv1gX6ocHnAH8"
-          // style={{ minWidth: 320, height: 700 }}
-          />
+            // style={{ minWidth: 320, height: 700 }}
+          ></div>
         </div>
       </section >
     </>
