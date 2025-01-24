@@ -48,7 +48,7 @@ const CalendlyWidget = () => {
           <div
             // className="calendly-inline-widget "
             className={`calendly-inline-widget min-w-80 ${isScreenSmall && "h-[66rem]"} ${isScreenSmallTab && "h-[70rem]"} ${isScreenMedium && "h-[70rem]"}  ${isScreenLarge && "h-[50rem]"} `}
-            data-url="https://calendar.app.google/aoU5qv1gX6ocHnAH8"
+            data-url="https://calendly.com/openiap/30min?hide_gdpr_banner=1&background_color=0f172a&text_color=f8fafc"
             // style={{ minWidth: 320, height: 700 }}
           ></div>
         </div>
